@@ -1,14 +1,18 @@
 <template>
   <ul class="tuning-steps" ref="tuning-steps">
     <li
-      @click="handleClick(item,$event)"
+      @click="handleClick(item, $event)"
       :style="`flex-basis:${itemw};order:${item.order}`"
-      :class="[item.className,item.status === currentValue ? 'active' : '',!!item.status?'':'empty']"
+      :class="[
+        item.className,
+        item.status === currentValue ? 'active' : '',
+        !!item.status ? '' : 'empty',
+      ]"
       v-for="(item, index) in listInfo"
       :key="index"
     >
       <slot :item="item">
-        <div class="turning-steps-body" style="height:200px;">
+        <div class="turning-steps-body" style="height: 200px">
           <p>{{ item.title }}</p>
           <p>{{ item.description }}</p>
         </div>
@@ -18,14 +22,16 @@
 </template>
 
 <script>
-import classnames from "classnames";
-import { group } from "./utils";
+import classnames from 'classnames';
+import { group } from './utils';
 export default {
-  name: "TurningStepsBar",
+  name: 'TurningStepsBar',
   computed: {
-    itemw(){
-      return isNaN(Number(this.itemWidth))? this.itemWidth:this.itemWidth+"px"   
-    }
+    itemw() {
+      return isNaN(Number(this.itemWidth))
+        ? this.itemWidth
+        : this.itemWidth + 'px';
+    },
   },
   data() {
     return {
@@ -34,36 +40,36 @@ export default {
     };
   },
   methods: {
-    handleClick(item,e) {
-      if(e.target.className.includes("empty")){
-        return 
+    handleClick(item, e) {
+      if (e.target.className.includes('empty')) {
+        return;
       }
       this.currentValue = item.status;
-      this.$emit("onClick", item);
+      this.$emit('onClick', item);
     },
   },
   async mounted() {
     console.log(this.value);
     this.currentValue = this.value;
     let count = 0;
-    const iw =  this.itemWidth.replace(/(%|px)/,'')
-    if (this.itemWidth.includes("%")) {
+    const iw = this.itemWidth.replace(/(%|px)/, '');
+    if (this.itemWidth.includes('%')) {
       count = Math.floor(100 / +iw);
     } else {
-      const elRoom = this.$refs["tuning-steps"];
-      count = Math.floor((elRoom.clientWidth-100) / iw);
+      const elRoom = this.$refs['tuning-steps'];
+      count = Math.floor((elRoom.clientWidth - 100) / iw);
     }
-    let _list = this.list
-    if(this.list.length%(count*2)>count){
-          _list = [...this.list,...Array(this.list.length%count).fill({})] 
+    let _list = this.list;
+    if (this.list.length % (count * 2) > count) {
+      _list = [...this.list, ...Array(this.list.length % count).fill({})];
     }
-   
+
     const targetList = _list.map((item, index) => {
       const _t = { ...item };
-      if ((index + 1) % count === 0 ) {
-        if((index + 1) % (2* count) === 0){
+      if ((index + 1) % count === 0) {
+        if ((index + 1) % (2 * count) === 0) {
           _t._left = true;
-        }else{
+        } else {
           _t._right = true;
         }
       }
@@ -78,22 +84,22 @@ export default {
               .reverse()
               .map((it, idx) => {
                 it.order = index * count + idx;
-                it.even = true
+                it.even = true;
                 return it;
               })
               .reverse()
           : item.map((it, idx) => {
               it.order = index * count + idx;
               return it;
-            })
+            }),
       )
       .flat(1)
       .map((item) => {
         const className = classnames({
-          "cell-left": item._left,
-          "cell-right":item._right,
-          "cell-even":item.even,
-          "noline":(item.order+1)%count ===0
+          'cell-left': item._left,
+          'cell-right': item._right,
+          'cell-even': item.even,
+          noline: (item.order + 1) % count === 0,
         });
         item.className = className;
         return item;
@@ -102,80 +108,80 @@ export default {
   props: {
     itemWidth: {
       type: String,
-      default: "30%",
+      default: '30%',
     },
     list: {
       type: Array,
       default: () => [
         {
-          status: "1",
-          title: "步骤条1",
-          description: "2021年7月7日",
+          status: '1',
+          title: '步骤条1',
+          description: '2021年7月7日',
         },
         {
-          status: "2",
-          title: "步骤条2",
-          description: "2021年11月19日",
+          status: '2',
+          title: '步骤条2',
+          description: '2021年11月19日',
         },
         {
-          status: "3",
-          title: "步骤条3",
-          description: "2021年12月31日",
+          status: '3',
+          title: '步骤条3',
+          description: '2021年12月31日',
         },
         {
-          status: "4",
-          title: "步骤条4",
-          description: "2021年12月31日",
+          status: '4',
+          title: '步骤条4',
+          description: '2021年12月31日',
         },
         {
-          status: "5",
-          title: "步骤条5",
-          description: "2021年12月31日",
+          status: '5',
+          title: '步骤条5',
+          description: '2021年12月31日',
         },
         {
-          status: "6",
-          title: "步骤条6",
-          description: "2021年12月31日",
+          status: '6',
+          title: '步骤条6',
+          description: '2021年12月31日',
         },
         {
-          status: "7",
-          title: "步骤条7",
-          description: "2021年12月31日",
+          status: '7',
+          title: '步骤条7',
+          description: '2021年12月31日',
         },
         {
-          status: "8",
-          title: "步骤条8",
-          description: "2021年12月31日",
+          status: '8',
+          title: '步骤条8',
+          description: '2021年12月31日',
         },
         {
-          status: "9",
-          title: "步骤条9",
-          description: "2021年12月31日",
+          status: '9',
+          title: '步骤条9',
+          description: '2021年12月31日',
         },
         {
-          status: "10",
-          title: "步骤条10",
-          description: "2021年12月31日",
+          status: '10',
+          title: '步骤条10',
+          description: '2021年12月31日',
         },
         {
-          status: "11",
-          title: "步骤条11",
-          description: "2021年12月31日",
+          status: '11',
+          title: '步骤条11',
+          description: '2021年12月31日',
         },
-          {
-          status: "12",
-          title: "步骤条12",
-          description: "2021年12月31日",
+        {
+          status: '12',
+          title: '步骤条12',
+          description: '2021年12月31日',
         },
-          {
-          status: "13",
-          title: "步骤条13",
-          description: "2021年12月31日",
+        {
+          status: '13',
+          title: '步骤条13',
+          description: '2021年12月31日',
         },
-         {
-          status: "14",
-          title: "步骤条14",
-          description: "2021年12月31日",
+        {
+          status: '14',
+          title: '步骤条14',
+          description: '2021年12月31日',
         },
       ],
     },
@@ -187,7 +193,7 @@ export default {
 </script>
 
 <style lang="less">
-:root{
+:root {
   --normal-steps-color: #666;
   --active-steps-color: #06e;
 }
@@ -199,14 +205,14 @@ export default {
   padding: 0 50px !important;
   margin: 0;
   counter-reset: order;
-  p{
+  p {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 
 .tuning-steps li + li {
-   margin-top: 0;
+  margin-top: 0;
 }
 /* 步骤项 */
 .tuning-steps > li {
@@ -219,78 +225,77 @@ export default {
   flex-grow: 0;
   position: relative;
 }
-.tuning-steps > li:last-child{
+.tuning-steps > li:last-child {
   flex: none;
 }
 
 /* 步骤项引导线 */
-.tuning-steps > li:not(.empty):not(.online):not(:last-child)::after  {
+.tuning-steps > li:not(.empty):not(.online):not(:last-child)::after {
   content: '';
   flex: 1;
   margin: 0 1em;
   border-bottom: 1px solid;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-
-.cell-left:not(.empty)::before{
-  content: "";
-  border-left:1px solid ;
-  border-top:1px solid ;
-  border-bottom:1px solid ;
+.cell-left:not(.empty)::before {
+  content: '';
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   border-radius: 10px 0px 0px 10px;
-  width: 20px ;
-  height: 100% ;
+  width: 20px;
+  height: 100%;
   position: absolute;
-  top:50%;
-  left:-30px
+  top: 50%;
+  left: -30px;
 }
-.cell-left.active::before,.cell-right.active::before{
-   border-color: var(--normal-steps-color);
+.cell-left.active::before,
+.cell-right.active::before {
+  border-color: var(--normal-steps-color);
 }
 
-
-.cell-right::before{
-  content: "";
-  border-right:1px solid ;
-  border-top:1px solid ;
-  border-bottom:1px solid ;
+.cell-right::before {
+  content: '';
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   //  border-color: var(--normal-steps-color);
   border-radius: 0px 10px 10px 0px;
-  width: 20px ;
-  height: 100% ;
+  width: 20px;
+  height: 100%;
   position: absolute;
-  top:50%;
-  right:30px
+  top: 50%;
+  right: 30px;
 }
 
-.tuning-steps > .active::after, 
-.tuning-steps > .active ~ li {color: var(--normal-steps-color);}
+.tuning-steps > .active::after,
+.tuning-steps > .active ~ li {
+  color: var(--normal-steps-color);
+}
 
 /* 步骤状态 */
-.tuning-steps > .active ,
-.tuning-steps > .cell-even.active::after{
-  color: var(--active-steps-color) 
+.tuning-steps > .active,
+.tuning-steps > .cell-even.active::after {
+  color: var(--active-steps-color);
 }
 
-.turning-steps-body{
+.turning-steps-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.online::after{
-   content: "";
-   display: none;
+.online::after {
+  content: '';
+  display: none;
 }
 
-
-.noline::after{
-    display: none;
+.noline::after {
+  display: none;
 }
 
-.cell-left.active::after{
-  color: var(--active-steps-color) 
+.cell-left.active::after {
+  color: var(--active-steps-color);
 }
-
 </style>

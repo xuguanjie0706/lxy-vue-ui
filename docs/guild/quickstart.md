@@ -4,13 +4,10 @@
 
 ## 用法
 
-...
-<template>
-  <Button>按钮</Button>
-</template>
+... <template> <Button>按钮</Button> </template>
 
 <script setup>
     // import { Button } from 'kitty-ui'
 </script>
-...
 
+...

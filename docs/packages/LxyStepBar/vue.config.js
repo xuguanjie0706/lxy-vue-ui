@@ -1,7 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
-const path = require("path")
+const { defineConfig } = require('@vue/cli-service');
+const path = require('path');
 module.exports = defineConfig({
-  lintOnSave:false,
+  lintOnSave: false,
   // transpileDependencies: true,
   configureWebpack: {
     entry: './src/index.js',
@@ -10,7 +10,7 @@ module.exports = defineConfig({
       // publicPath: '/dist/',
       filename: 'index.js',
       // 打包后的格式（三种规范amd,cmd,common.js)通过umd规范可以适应各种规范，以及全局window属性
-      libraryTarget:'umd',
+      libraryTarget: 'umd',
     },
     optimization: {
       minimize: false,
@@ -18,7 +18,7 @@ module.exports = defineConfig({
     externals: {
       vue: 'vue',
     },
-  }
+  },
   // chainWebpack:  (config)=> {
   //   console.log(config);
   //   const name = path.resolve(__dirname,"./src/index.js")
@@ -30,4 +30,4 @@ module.exports = defineConfig({
   //   // config.devtool("source-map")
   //   return  config
   // },
-})
+});

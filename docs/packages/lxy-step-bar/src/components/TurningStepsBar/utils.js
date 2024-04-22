@@ -10,15 +10,17 @@
  *
  */
 
-export function group(array, subGroupLength ,callback) {
-    var index = 0;
-    var newArray = [];
-    while (index < array.length) {
-      if(!callback){
-        newArray.push(array.slice(index, index += subGroupLength));
-      }else{
-        newArray.push(array.slice(index, index += subGroupLength).map(callback))
-      }
+export function group(array, subGroupLength, callback) {
+  var index = 0;
+  var newArray = [];
+  while (index < array.length) {
+    if (!callback) {
+      newArray.push(array.slice(index, (index += subGroupLength)));
+    } else {
+      newArray.push(
+        array.slice(index, (index += subGroupLength)).map(callback),
+      );
     }
-    return newArray;
   }
+  return newArray;
+}

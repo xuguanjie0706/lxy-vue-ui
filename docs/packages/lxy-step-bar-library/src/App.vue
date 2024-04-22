@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import myFunction from './components/index.js'
+import myFunction from './components/index.js';
 // console.log(myFunction);
 // import myFunction from "lxy-step-bar"
 console.log(myFunction);

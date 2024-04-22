@@ -20,7 +20,8 @@
 
 This is a simple example
 
-<StepsBar />
+<StepsBar ></StepsBar>
+
 <details>
 <summary>展开查看</summary>
 
@@ -31,38 +32,39 @@ This is a simple example
   </div>
 </template>
 ```
-</details>
 
+</details>
 
 ## 插槽使用
 
 This is a slot example
+
 <StepsBar value="1">
-    <template #default="current">
-        <div class="turning-steps-body">
-            <p> {{current.item.title}}</p> 
-            <p> {{current.item.description}}</p>   
-        </div> 
-    </template>
+ <template #default="current"> <div class="turning-steps-body"> <p> {{current.item.title}}</p> <p> {{current.item.description}}</p>
+
+ </div>
+</template> 
 </StepsBar>
+
 <details>
-<summary>展开查看</summary>
+
+  <summary>展开查看</summary>
 
 ```vue
 <template>
   <div>
-   <StepsBar value="1">
-    <template #default="current">
+    <StepsBar value="1">
+      <template #default="current">
         <div class="turning-steps-body">
-            <p> {{current.item.title}}</p> 
-            <p> {{current.item.description}}</p>   
-        </div> 
-    </template>
-</StepsBar>
+          <p>{{ current.item.title }}</p>
+          <p>{{ current.item.description }}</p>
+        </div>
+      </template>
+    </StepsBar>
   </div>
 </template>
 ```
-</details>
 
+</details>
 
 ## More docs

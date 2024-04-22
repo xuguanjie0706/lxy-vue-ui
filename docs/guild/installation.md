@@ -15,12 +15,15 @@ Element Plus 目前还在开发迭代中
 # 选择一个你喜欢的包管理器
 
 # NPM
+
 $ npm install kitty-ui --save
 
 # Yarn
+
 $ yarn add kitty-ui
 
 # pnpm
+
 $ pnpm install kitty-ui
 
 ## 浏览器直接引入
