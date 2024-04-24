@@ -4,7 +4,10 @@ import { defineConfig } from 'vite';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 export default defineConfig({
   // 配置选项
-  plugins: [vue(), cssInjectedByJsPlugin({ topExecutionPriority: false })],
+  plugins: [
+     vue(),
+     cssInjectedByJsPlugin({ topExecutionPriority: false })
+  ],
   build: {
     lib: {
       entry: 'src/main.js',

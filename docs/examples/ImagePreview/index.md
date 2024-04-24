@@ -16,8 +16,6 @@
   import ImagePreview from '../../packages/lxy-image-preview/src/components/ImagePreview/index.vue'
 </script>
 
-
-
 ## 基本使用
 
 This is a simple example
@@ -28,20 +26,18 @@ This is a simple example
             'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
           thumbnailURL:
             'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
-            width:800,height:1000
+            width:800,
+            height:1000
         }]"
-    />
-<ImagePreview galleryID="my-test-gallery" :images="[
+    /> <ImagePreview galleryID="my-test-gallery" :images="[
         {
           largeURL:
             'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
           thumbnailURL:
-            'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
-            width:800,height:1000
+            'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
         },{
             largeURL:'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
                 thumbnailURL:
             'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
-            width:800,height:1000
         }]"
     />
