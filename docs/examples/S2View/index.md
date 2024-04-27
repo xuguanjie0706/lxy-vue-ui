@@ -12,7 +12,7 @@
     import axios from "axios"
     import { onMounted ,ref ,getCurrentInstance} from 'vue';
     import { data1 } from "../../mock/index.js"
-    import S2View from '../../packages/lxy-s2-view/src/components/S2View/index.vue'
+    import S2View from '../../../packages/lxy-s2-view/src/components/S2View/index.vue'
     const dataSource1 = ref(data1)
     const hierarchyType = ref("grid")
     const meta1 = ref([

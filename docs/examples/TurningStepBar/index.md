@@ -1,5 +1,5 @@
 <script setup>
-import TurningStepsBar from '../../packages/lxy-step-bar/src/components/TurningStepsBar/index.vue'
+import TurningStepsBar from '../../../packages/lxy-step-bar/src/components/TurningStepsBar/index.vue'
 </script>
 
 # TurningStepsBar 转弯步骤条

@@ -13,7 +13,7 @@
 </style>
 
 <script setup>
-  import StepsBar from '../../packages/LxyStepBar/src/components/StepsBar/index.vue'
+  import StepsBar from '../../../packages/LxyStepBar/src/components/StepsBar/index.vue'
 </script>
 
 ## 基本使用
@@ -28,7 +28,7 @@ This is a simple example
 ```vue
 <template>
   <div>
-    <StepsBar />
+    <StepsBar></StepsBar>
   </div>
 </template>
 ```

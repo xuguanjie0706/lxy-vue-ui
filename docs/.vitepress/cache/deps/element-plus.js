@@ -1,6 +1,6 @@
 import {
   isVue2
-} from "./chunk-ZEMWCMSS.js";
+} from "./chunk-Q2K2J2V3.js";
 import {
   Comment,
   Fragment,
@@ -9,6 +9,8 @@ import {
   Text,
   Transition,
   TransitionGroup,
+  __commonJS,
+  __toESM,
   camelize,
   capitalize,
   cloneVNode,
@@ -88,11 +90,7 @@ import {
   withDirectives,
   withKeys,
   withModifiers
-} from "./chunk-UOO25QWC.js";
-import {
-  __commonJS,
-  __toESM
-} from "./chunk-LQ2VYIYD.js";
+} from "./chunk-5N65RLD3.js";
 
 // node_modules/.pnpm/dayjs@1.11.10/node_modules/dayjs/dayjs.min.js
 var require_dayjs_min = __commonJS({

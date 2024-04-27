@@ -1,5 +1,5 @@
 <script setup>
-  import ImagePreview from '../../packages/lxy-image-preview/src/components/ImagePreview/index.vue'
+  import ImagePreview from '../../../packages/lxy-image-preview/src/components/ImagePreview/index.vue'
 </script>
 
 ## 基本使用
