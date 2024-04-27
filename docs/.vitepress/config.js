@@ -1,5 +1,5 @@
 export default {
-  title: 'lxy-vue-ui',
+  title: 'LXY',
   description: 'Just playing around.',
   themeConfig: {
     // siteTitle: false,
@@ -68,6 +68,13 @@ export default {
               link: '/examples/ImagePreview/',
             }
           ]
+        },
+        {
+          text:"媒体组件",
+          items:[{
+            text:"大数据",
+            link:'/examples/S2View/',
+          }]
         }
       ],
       '/css/': [
@@ -96,7 +103,24 @@ export default {
       ],
       '/daily/': [
         {
-          text: '日常',
+          text: 'Antd库',
+          link:"/daily/antd/",
+          items:[
+            {
+              text:"s2",
+              link:"/daily/antd/s2/",
+            }
+          ]
+        },
+        {
+          text: '数据',
+          link:"/daily/data/mockjs",
+          items:[
+            {
+              text:"mockjs",
+              link:"/daily/data/mockjs/",
+            }
+          ]
         },
       ],
       '/animate/': [

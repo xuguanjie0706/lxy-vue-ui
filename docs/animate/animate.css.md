@@ -47,8 +47,6 @@ title: animate.css
     
 </script>
 
-
-
 <style>
 .my-element{
 display: inline-block;
@@ -66,16 +64,20 @@ display: inline-block;
 ```
 pnpm add animate.css
 ```
+
 ## 引入
+
 ```
  import 'animate.css';
  <h1 class="animate__animated animate__bounce">An animated element</h1>
 ```
+
 <h1 class="animate__animated animate__bounce">An animated element</h1>
 
 原来真的如此简单
 
 ## 使用@keyframes
+
 ```
 <h1 class="my-element">An animated custom element</h1>
 .my-element{
@@ -106,31 +108,39 @@ document.documentElement.style.setProperty('--animate-duration', '2s');
 ```
 
 ## 延迟classes
+
 ```
 <div class="animate__animated animate__bounce animate__delay-2s">Example</div>
 ```
+
 <div class="animate__animated animate__bounce animate__delay-2s">Example</div>
 
 ## Slow, slower, fast, and Faster classes
+
 ```
 animate__slow	2s
 animate__slower	3s
 animate__fast	800ms
 animate__faster	500ms
 ```
+
 <div class="animate__animated animate__bounce animate__faster">Example</div>
 
 ## Repeating
+
 ```
 animate__repeat-1	1
 animate__repeat-2	2
 animate__repeat-3	3
 animate__infinite	infinite
 ```
+
 <div class="animate__animated animate__bounce animate__repeat-2">Example</div>
 
 ## 与Javascript一起使用
+
 你可以通过监听动画事件来监听
+
 ```
 const element = document.querySelector('.my-element');
 console.log(element)
@@ -140,8 +150,9 @@ element.addEventListener('animationend', (e) => {
 ```
 
 ## 进阶
-你可以很轻松的对出队列动画
-<el-button type="primary" @click="handleClick">开始动画</el-button>
+
+你可以很轻松的对出队列动画 <el-button type="primary" @click="handleClick">开始动画</el-button>
+
 <h1 class="my-element1">An animated custom element - my-element1</h1>
 <h1 class="my-element2">An animated custom element - my-element2</h1>
 <h1 class="my-element3">An animated custom element - my-element3</h1>
@@ -167,6 +178,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
 ```
+
 ```
 await animateCSS(".my-element1",'bounce')
 await animateCSS(".my-element2",'flash')
@@ -176,8 +188,11 @@ await animateCSS(".my-element5",'backInUp')
 ```
 
 ## 结合使用 transition-group
+
 ### 例子1
-<button type="primary" @click="ADD">ADD</button><button type="success" @click="POP">POP</button>
+
+<el-button type="primary" @click="ADD">ADD</el-button><el-button type="success" @click="POP">POP</el-button>
+
 <div style="display:flex">
     <transition-group enter-active-class="animate__animated animate__bounceOut" leave-active-class="animate__animated animate__hinge">
         <div style="padding:10px" class="item" v-for="item in list" :key="item">
@@ -186,15 +201,19 @@ await animateCSS(".my-element5",'backInUp')
     </transition-group>
 </div>
 
-
 ## 新学知识点
-***
+
+---
+
 ```
 element.addEventListener('click', myClickHandler, { once: true });
 
 ```
+
 addEventListener第三个参数可以为对象值
+
 - capture：布尔值，表示监听器是否在捕获阶段执行。
 - once：布尔值，表示监听器是否仅执行一次。
 - passive：布尔值，表示监听器不会调用 preventDefault()
-***
+
+---

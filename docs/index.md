@@ -1,12 +1,12 @@
 ---
 layout: home
 
-title: Kitty
-titleTemplate: 一个Vue3组件库
+title: LXY
+titleTemplate: 一个咸鱼的博客
 
 hero:
-  name: Kitty
-  text: 一个Vue3组件库
+  name: 记录每天的点点滴滴
+  text: 一个个人的博客
   tagline: 没啥特点仅供学习
   image:
     src: /logo.png
@@ -14,18 +14,17 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /daily/
     - theme: alt
       text: 在 Gitee 上查看
-      link: https://gitee.com/geeksdidi/kittyui
 
 features:
   - icon: 💡
-    title: Vue3组件库
-    details: 基于vite打包和TypeScript开发
+    title: Vue组件库
+    details: 基于vite打包
   - icon: 📦
-    title: 仅供学习使用
-    details: 倾向于Vue3组件库的学习，请勿用于实际生产项目
+    title: 每日记录
+    details: 让以后的自己有迹可循
   - icon: 🛠️
     title: 按需引入
     details: 直接支持按需引入无需配置任何插件。

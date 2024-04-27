@@ -56,7 +56,7 @@ export default {
 }
 
 .pswp__img.pswp__img--placeholder{
-  width: 10px !important; 
+  // width: 10px !important; 
   opacity: 0 !important; 
 }
 </style>
