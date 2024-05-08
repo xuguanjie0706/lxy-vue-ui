@@ -16,7 +16,8 @@
   },
   "lint-staged": {
     "/**/*.{js,vue,ts,tsx}": [
-      "pnpm format"
+      "pnpm format",
+      "pnpm eslint"
     ],
     "package.json": [
       "pnpm format"

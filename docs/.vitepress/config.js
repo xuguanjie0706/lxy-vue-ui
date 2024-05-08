@@ -32,10 +32,7 @@ export default {
         },
         {
           text: '进阶',
-          items: [
-
-            
-          ],
+          items: [],
         },
       ],
       '/examples/': [
@@ -147,10 +144,9 @@ export default {
               link: '/daily/pkg/pnpm/index.md',
             },
             {
-              
-              text:"代码规范",
+              text: '代码规范',
               link: '/daily/pkg/husky/index.md',
-            }
+            },
           ],
         },
         {
@@ -158,7 +154,7 @@ export default {
           // link:"/daily/pkg/",
           items: [
             {
-              text: "dompurify",
+              text: 'dompurify',
               link: '/daily/save/dompurify.md',
             },
           ],
