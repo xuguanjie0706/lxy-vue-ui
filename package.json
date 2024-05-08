@@ -18,6 +18,9 @@
     "/**/*.{js,ts,tsx}": [
       "prettier --write  docs/. packages/.",
       "pnpm lint"
+    ],
+    "package.json": [
+      "pnpm format"
     ]
   },
   "dependencies": {
