@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "/**/*.{js,vue,ts,tsx}": [
-      "prettier --write  docs/. packages/."
+      "pnpm format"
     ],
     "package.json": [
       "pnpm format"
