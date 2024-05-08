@@ -17,7 +17,8 @@
   "lint-staged": {
     "/**/*.{js,ts,tsx}": [
       "pnpm format",
-      "pnpm lint"
+      "pnpm lint",
+      "git add"
     ],
     "package.json": [
       "pnpm format"
