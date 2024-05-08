@@ -7,8 +7,9 @@ const data = Mock.mock({
     'id|+1': 1
   }]
 })
+
 // 输出结果
-// console.log(JSON.stringify(data, null, 4))
+JSON.stringify(data, null, 4)
 const template = {
   describe: '标准交叉表数据。',
   fields: {

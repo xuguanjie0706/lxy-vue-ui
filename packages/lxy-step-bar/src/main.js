@@ -9,22 +9,22 @@
 // }
 // // export default Toast
 
-import StepsBar from './components/StepsBar/index.vue';
-import TurningStepsBar from './components/TurningStepsBar/index.vue';
+import StepsBar from './components/StepsBar/index.vue'
+import TurningStepsBar from './components/TurningStepsBar/index.vue'
 
-let LxyStepBar = {};
-export { StepsBar, TurningStepsBar };
+const LxyStepBar = {}
+export { StepsBar, TurningStepsBar }
 
 LxyStepBar.install = function (Vue) {
   // const { prefix = 'lxy'} = option
   // Vue.component(`${prefix}-steps-bar`,StepsBar)
-  Vue.component(`steps-bar`, StepsBar);
-  Vue.component(`turning-steps-bar`, TurningStepsBar);
+  Vue.component('steps-bar', StepsBar)
+  Vue.component('turning-steps-bar', TurningStepsBar)
   // Vue.component(`${prefix}-turning-steps-bar`,TurningStepsBar)
-};
-
-if (window.Vue) {
-  window.Vue.use(LxyStepBar);
 }
 
-export default LxyStepBar;
+if (window.Vue) {
+  window.Vue.use(LxyStepBar)
+}
+
+export default LxyStepBar
