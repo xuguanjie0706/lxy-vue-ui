@@ -15,12 +15,12 @@
     "serve": "vitepress serve docs"
   },
   "lint-staged": {
-    "package.json": [
-      "pnpm format"
-    ],
     "/**/*.{js,ts,tsx}": [
       "pnpm format",
       "pnpm lint"
+    ],
+    "package.json": [
+      "pnpm format"
     ]
   },
   "dependencies": {
