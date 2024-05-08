@@ -148,6 +148,10 @@ export default {
               text: 'pnpm',
               link: '/daily/pkg/pnpm/index.md',
             },
+            {
+              text:"代码规范",
+              link: '/daily/pkg/husky/index.md',
+            }
           ],
         },
         {

@@ -55,6 +55,12 @@ pnpm add <pkg>@3.0.0	//安装指定版本 3.0.0
 
 ```
 
+### 全局设置
+
+```
+pnpm config set ignore-workspace-root-check true
+```
+
 ### 安装：pnpm install
 
 等同于pnpm i，用于安装项目所有依赖

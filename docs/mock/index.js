@@ -11,7 +11,7 @@ const data = Mock.mock({
 });
 
 // 输出结果
-JSON.stringify(data, null, 4);
+// JSON.stringify(data, null, 4);
 const template = {
   describe: '标准交叉表数据。',
   fields: {
