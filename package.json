@@ -17,11 +17,7 @@
   "lint-staged": {
     "/**/*.{js,ts,tsx}": [
       "prettier --write  docs/. packages/.",
-      "pnpm lint",
-      "git add"
-    ],
-    "package.json": [
-      "pnpm format"
+      "pnpm lint"
     ]
   },
   "dependencies": {
