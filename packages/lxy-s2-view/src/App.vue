@@ -3,7 +3,7 @@ import S2Veiw from './components/S2View/index.vue';
 </script>
 
 <template>
-         <s2-veiw msg="Vite + Vue"></s2-veiw>
+  <s2-veiw msg="Vite + Vue"></s2-veiw>
 </template>
 
 <style scoped>
