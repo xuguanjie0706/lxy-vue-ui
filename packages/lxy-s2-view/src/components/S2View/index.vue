@@ -8,51 +8,50 @@ export default {
   name: 's2-view',
   data() {
     return {
-        s2:null
+      s2: null,
     };
   },
-  props:{
-    dataSource:{
-        type:Object,
-        default:()=>{}
+  props: {
+    dataSource: {
+      type: Object,
+      default: () => {},
     },
-    hierarchyType:{
-        type:String,
-        default:"grid"
+    hierarchyType: {
+      type: String,
+      default: 'grid',
     },
-    meta:{
-      type:Array,
-      default:()=>[]
+    meta: {
+      type: Array,
+      default: () => [],
     },
-    layoutWidthType:{
-      type:String,
-      default:"colAdaptive"
-    }
+    layoutWidthType: {
+      type: String,
+      default: 'colAdaptive',
+    },
   },
   mounted() {
-    if(this.dataSource){
+    if (this.dataSource) {
       this.bootstrap();
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       this.s2.setThemeCfg({ name: 'colorful' });
       // this.s2.render(false);
-    },1000)
-   
+    }, 1000);
   },
-  watch:{
-    hierarchyType:{
-      handler(value){
-        this.s2.destroy()
-        this.bootstrap()
-      }
-    },
-    dataSource:{
-       handler(value){
-        console.log(value,22);
-        this.s2.destroy()
-        this.bootstrap()
+  watch: {
+    hierarchyType: {
+      handler(value) {
+        this.s2.destroy();
+        this.bootstrap();
       },
-      deep:true
+    },
+    dataSource: {
+      handler(value) {
+        console.log(value, 22);
+        this.s2.destroy();
+        this.bootstrap();
+      },
+      deep: true,
     },
   },
   methods: {
@@ -107,11 +106,11 @@ export default {
       };
       const s2DataConfig = {
         ...this.dataSource,
-        meta:this.meta
+        meta: this.meta,
       };
       const container = document.getElementById('container');
       const s2 = new PivotSheet(container, s2DataConfig, s2Options);
-      this.s2 = s2
+      this.s2 = s2;
       //  s2.setTheme({
       //   rowCell: {
       //     cell: {
@@ -120,7 +119,7 @@ export default {
       //   }
       // });
       await s2.render();
-     
+
       // await this.s2.setOptions({...this.s2.options, hierarchyType: "tree"},false)
     },
   },

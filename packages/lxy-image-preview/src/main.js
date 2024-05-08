@@ -9,17 +9,17 @@
 // }
 // // export default Toast
 
-import ImagePreview from './components/ImagePreview/index.vue'
+import ImagePreview from './components/ImagePreview/index.vue';
 
-const LxyImagePreview = {}
-export { ImagePreview }
+const LxyImagePreview = {};
+export { ImagePreview };
 
 LxyImagePreview.install = function (Vue) {
-  Vue.component('image-preview', ImagePreview)
-}
+  Vue.component('image-preview', ImagePreview);
+};
 
 if (window.Vue) {
-  window.Vue.use(LxyImagePreview)
+  window.Vue.use(LxyImagePreview);
 }
 
-export default LxyImagePreview
+export default LxyImagePreview;

@@ -5,13 +5,13 @@
       ? define(factory)
       : ((global =
           typeof globalThis !== 'undefined' ? globalThis : global || self),
-        (global.index = factory()))
+        (global.index = factory()));
 })(this, function () {
-  'use strict'
+  'use strict';
 
   const index = {
-    a: 123
-  }
+    a: 123,
+  };
 
-  return index
-})
+  return index;
+});

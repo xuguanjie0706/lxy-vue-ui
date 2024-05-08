@@ -1,9 +1,9 @@
 <script setup>
-import X6Veiw from './components/x6-view.vue'
+import X6Veiw from './components/x6-view.vue';
 </script>
 
 <template>
-  <x6-veiw msg="Vite + Vue" ></x6-veiw>
+  <x6-veiw msg="Vite + Vue"></x6-veiw>
 </template>
 
 <style scoped>

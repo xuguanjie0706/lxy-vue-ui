@@ -1,5 +1,5 @@
 <template>
-   <div :id="galleryID">
+  <div :id="galleryID">
     <a
       v-for="(image, key) in imagesData"
       :key="key"
@@ -9,27 +9,27 @@
       target="_blank"
       rel="noreferrer"
     >
-      <img :src="image.thumbnailURL" alt=""  />
+      <img :src="image.thumbnailURL" alt="" />
     </a>
   </div>
 </template>
 <script>
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
-import photoswipe from 'photoswipe'
+import photoswipe from 'photoswipe';
 export default {
-  name:"ImagePreview",
+  name: 'ImagePreview',
   props: {
     galleryID: String,
     images: Array,
   },
-  data(){
+  data() {
     return {
-      lightbox:null,
-      imagesData:this.images
-    }
+      lightbox: null,
+      imagesData: this.images,
+    };
   },
-   mounted() {
+  mounted() {
     if (!this.lightbox) {
       this.lightbox = new PhotoSwipeLightbox({
         gallery: '#' + this.$props.galleryID,
@@ -37,26 +37,26 @@ export default {
         showHideAnimationType: 'zoom',
         showAnimationDuration: 300,
         hideAnimationDuration: 0,
-        pswpModule: photoswipe
+        pswpModule: photoswipe,
       });
       this.lightbox.init();
     }
   },
-   unmounted() {
+  unmounted() {
     if (this.lightbox) {
       this.lightbox.destroy();
       this.lightbox = null;
     }
   },
-}
+};
 </script>
 <style lang="less">
-.pswp__img{
-  object-fit:scale-down;
+.pswp__img {
+  object-fit: scale-down;
 }
 
-.pswp__img.pswp__img--placeholder{
-  // width: 10px !important; 
-  opacity: 0 !important; 
+.pswp__img.pswp__img--placeholder {
+  // width: 10px !important;
+  opacity: 0 !important;
 }
 </style>
