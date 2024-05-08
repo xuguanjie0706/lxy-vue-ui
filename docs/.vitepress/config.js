@@ -157,7 +157,7 @@ export default {
           // link:"/daily/pkg/",
           items: [
             {
-              text: 'dompurify',
+              text: "dompurify",
               link: '/daily/save/dompurify.md',
             },
           ],
