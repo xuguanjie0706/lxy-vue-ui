@@ -9,7 +9,7 @@
   "scripts": {
     "build": "vitepress build docs",
     "dev": "vitepress dev docs",
-    "format": "prettier   docs/. packages/.",
+    "format": "prettier --write  docs/. packages/.",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "serve": "vitepress serve docs"
