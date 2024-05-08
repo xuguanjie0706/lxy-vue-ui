@@ -15,7 +15,7 @@
     "serve": "vitepress serve docs"
   },
   "lint-staged": {
-    "/**/*.{js,ts,tsx}": [
+    "/**/*.{js,vue,ts,tsx}": [
       "prettier --write  docs/. packages/.",
       "pnpm lint"
     ],
