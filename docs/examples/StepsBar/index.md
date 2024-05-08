@@ -13,7 +13,7 @@
 </style>
 
 <script setup>
-  import StepsBar from '../../../packages/LxyStepBar/src/components/StepsBar/index.vue'
+  import StepsBar from '../../../packages/lxy-step-bar/src/components/StepsBar/index.vue'
 </script>
 
 ## 基本使用
