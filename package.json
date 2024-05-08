@@ -19,6 +19,7 @@
       "pnpm format"
     ],
     "/**/*.{js,ts,tsx}": [
+      "pnpm format",
       "pnpm lint"
     ]
   },
