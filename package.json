@@ -9,14 +9,14 @@
   "scripts": {
     "build": "vitepress build docs",
     "dev": "vitepress dev docs",
-    "format": "prettier --write docs/. packages/.",
+    "format": "prettier   docs/. packages/.",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "serve": "vitepress serve docs"
   },
   "lint-staged": {
     "/**/*.{js,ts,tsx}": [
-      "pnpm format",
+      "prettier --write",
       "pnpm lint",
       "git add"
     ],
