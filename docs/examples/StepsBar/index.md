@@ -4,12 +4,12 @@
         border-radius: 5px;
         padding:20px
     }
-    details > summary:first-of-type {
+    /* details > summary:first-of-type {
         font-size: 10px;
         padding: 8px 0;
         cursor: pointer;
         color: #1989fa;
-    }
+    } */
 </style>
 
 <script setup>

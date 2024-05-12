@@ -8,12 +8,12 @@
         margin:10px 5px
     }
     
-    details > summary:first-of-type {
+    /* details > summary:first-of-type {
         font-size: 10px;
         padding: 8px 0;
         cursor: pointer;
         color: #1989fa;
-    }
+    } */
 </style>
 
 # Button 按钮
@@ -159,9 +159,7 @@ import { el-button } from "kitty-ui";
     </div>
 </div>
 
-<details>
-<summary>展开查看</summary>
-
+::: details 展开查看
 ```vue
 <template>
   <div>
@@ -180,5 +178,4 @@ import { el-button } from "kitty-ui";
 }
 </style>
 ```
-
-</details>
+:::

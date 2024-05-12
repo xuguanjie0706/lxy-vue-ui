@@ -98,6 +98,14 @@ export default {
       ],
       '/daily/': [
         {
+          text: 'vitePress',
+          link: '/daily/vitepress/',
+        },
+        {
+          text: 'scaffold',
+          link: '/daily/scaffold/',
+        },
+        {
           text: 'Antd库',
           link: '/daily/antd/',
           items: [
