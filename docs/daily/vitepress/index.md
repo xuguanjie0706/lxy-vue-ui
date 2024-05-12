@@ -3,10 +3,12 @@
 为了加深一遍，vitepress 1.1.4界面真的好看了很多
 
 ## 创建工程
+
 ```
 pnpm vitepress init
 
 ```
+
 ```
 ┌  Welcome to VitePress!
 │
@@ -29,6 +31,3 @@ pnpm vitepress init
 ```
 pnpm run docs:dev
 ```
-
-
-

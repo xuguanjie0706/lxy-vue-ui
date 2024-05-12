@@ -3,7 +3,7 @@ import 'element-plus/dist/index.css';
 import DefaultTheme from 'vitepress/theme';
 // import TurningStepsBar from "/components/TurningStepsBar"
 // import '../public/base.css';
-import './style.css'
+import './style.css';
 console.log(DefaultTheme);
 export default {
   ...DefaultTheme,

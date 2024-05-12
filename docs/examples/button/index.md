@@ -160,6 +160,7 @@ import { el-button } from "kitty-ui";
 </div>
 
 ::: details 展开查看
+
 ```vue
 <template>
   <div>
@@ -178,4 +179,5 @@ import { el-button } from "kitty-ui";
 }
 </style>
 ```
+
 :::
