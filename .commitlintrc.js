@@ -1,6 +1,10 @@
-// cz.config.js
-/** @type {import('cz-git').CommitizenGitOptions} */
+// .commitlintrc.js
+/** @type {import('cz-git').UserConfig} */
 module.exports = {
+  rules: {
+    // @see: https://commitlint.js.org/#/reference-rules
+  },
+  prompt: {
     alias: { fd: 'docs: fix typos' },
     messages: {
       type: 'Select the type of change that you\'re committing:',
@@ -22,12 +26,12 @@ module.exports = {
       { value: 'docs', name: 'docs:     Documentation only changes', emoji: ':memo:' },
       { value: 'style', name: 'style:    Changes that do not affect the meaning of the code', emoji: ':lipstick:' },
       { value: 'refactor', name: 'refactor: A code change that neither fixes a bug nor adds a feature', emoji: ':recycle:' },
-      { value: 'perf', name: 'perf:     A code change that improves performance', emoji: ':zap:' },
-      { value: 'test', name: 'test:     Adding missing tests or correcting existing tests', emoji: ':white_check_mark:' },
-      { value: 'build', name: 'build:    Changes that affect the build system or external dependencies', emoji: ':package:' },
-      { value: 'ci', name: 'ci:       Changes to our CI configuration files and scripts', emoji: ':ferris_wheel:' },
-      { value: 'chore', name: 'chore:    Other changes that don\'t modify src or test files', emoji: ':hammer:' },
-      { value: 'revert', name: 'revert:   Reverts a previous commit', emoji: ':rewind:' }
+      // { value: 'perf', name: 'perf:     A code change that improves performance', emoji: ':zap:' },
+      // { value: 'test', name: 'test:     Adding missing tests or correcting existing tests', emoji: ':white_check_mark:' },
+      // { value: 'build', name: 'build:    Changes that affect the build system or external dependencies', emoji: ':package:' },
+      // { value: 'ci', name: 'ci:       Changes to our CI configuration files and scripts', emoji: ':ferris_wheel:' },
+      // { value: 'chore', name: 'chore:    Other changes that don\'t modify src or test files', emoji: ':hammer:' },
+      // { value: 'revert', name: 'revert:   Reverts a previous commit', emoji: ':rewind:' }
     ],
     useEmoji: true,
     emojiAlign: 'center',
@@ -42,7 +46,7 @@ module.exports = {
     emptyScopesAlias: 'empty',
     upperCaseSubject: false,
     markBreakingChangeMode: false,
-    allowBreakingChanges: ['feat'],
+    allowBreakingChanges: ['feat', 'fix'],
     breaklineNumber: 100,
     breaklineChar: '|',
     skipQuestions: [],
@@ -53,12 +57,10 @@ module.exports = {
     allowCustomIssuePrefix: true,
     allowEmptyIssuePrefix: true,
     confirmColorize: true,
-    maxHeaderLength: Infinity,
-    maxSubjectLength: Infinity,
-    minSubjectLength: 0,
     scopeOverrides: undefined,
     defaultBody: '',
     defaultIssues: '',
     defaultScope: '',
     defaultSubject: ''
   }
+}
