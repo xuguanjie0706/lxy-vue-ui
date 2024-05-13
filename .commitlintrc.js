@@ -5,7 +5,10 @@ module.exports = {
     // @see: https://commitlint.js.org/#/reference-rules
   },
   prompt: {
-    alias: { fd: 'docs: fix typos' },
+    alias: { 
+      fd: 'docs: fix typos',
+      ur:"docs: update README" 
+    },
     messages: {
       type: 'Select the type of change that you\'re committing:',
       scope: 'Denote the SCOPE of this change (optional):',
