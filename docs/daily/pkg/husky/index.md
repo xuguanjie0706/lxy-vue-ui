@@ -9,11 +9,13 @@ pnpm i eslint@8
 pnpm eslint --init
 ```
 
+
 ## prettier
 
 ```
 pnpm i prettier prettier-plugin-organize-imports prettier-plugin-packagejson
 ```
+
 ::: details 展开查看 `.prettierrc.js`完整配置模版
 
 ```
@@ -83,7 +85,6 @@ extends: [
     ]
 }
 ```
-
 
 ## 代码提交规范
 
@@ -166,7 +167,6 @@ module.exports = {
 
 :::
 
-
 ```package.json
  "script":{
   ...
@@ -179,9 +179,10 @@ module.exports = {
   },
 ```
 
-
 ## 发版
+
 使用 `standard-version`发布版本并生成tag
+
 ```
 pnpm i standard-version -D
 ```
