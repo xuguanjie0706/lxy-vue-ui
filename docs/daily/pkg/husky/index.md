@@ -14,6 +14,31 @@ pnpm eslint --init
 ```
 pnpm i prettier prettier-plugin-organize-imports prettier-plugin-packagejson
 ```
+::: details 展开查看 ` .prettierrc.js`完整配置模版
+
+```
+module.exports = {
+  printWidth: 80,
+  singleQuote: true,
+  trailingComma: 'all',
+  proseWrap: 'never',
+  overrides: [
+    {
+      files: '.prettierrc',
+      options: {
+        parser: 'json',
+      },
+    },
+  ],
+  plugins: [
+    require.resolve('prettier-plugin-organize-imports'),
+    require.resolve('prettier-plugin-packagejson'),
+  ],
+};
+
+```
+
+:::
 
 ## husky
 
@@ -26,7 +51,7 @@ npx husky-init //初始化
 
 ### pre-commit
 
-```
+```pre-commit
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
@@ -39,11 +64,10 @@ pnpm lint-staged
 pnpm i eslint-plugin-prettier eslint-config-prettier
 ```
 
-```
-eslint.config.js extends: [
-
+```eslint.config.js
+extends: [
+  ...
   'plugin:prettier/recommended',
-
 ]
 ```
 
@@ -142,9 +166,8 @@ module.exports = {
 
 :::
 
-::: details 展开查看 `package.json`配置
 
-```
+```package.json
  "script":{
   ...
   "commit": "git-cz",
@@ -156,15 +179,12 @@ module.exports = {
   },
 ```
 
-:::
-
 
 ## 发版
 使用 `standard-version`发布版本并生成tag
 ```
 pnpm i standard-version -D
 ```
-::: details 展开查看 `package.json`配置
 
 ```package.json
  "script":{
