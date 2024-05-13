@@ -20,7 +20,7 @@ module.exports = {
       // customFooterPrefix: 'Input ISSUES prefix:',
       // footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
       // generatingByAI: 'Generating your AI commit subject...',
-      // generatedSelectByAI: 'Select suitable subject by AI generated:',
+      generatedSelectByAI: 'Select suitable subject by AI generated:',
       confirmCommit: 'Are you sure you want to proceed with the commit above?'
     },
     types: [
