@@ -14,7 +14,7 @@ pnpm eslint --init
 ```
 pnpm i prettier prettier-plugin-organize-imports prettier-plugin-packagejson
 ```
-::: details 展开查看 ` .prettierrc.js`完整配置模版
+::: details 展开查看 `.prettierrc.js`完整配置模版
 
 ```
 module.exports = {
