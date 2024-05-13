@@ -8,10 +8,12 @@
   "main": "index.js",
   "scripts": {
     "build": "vitepress build docs",
+    "commit": "git-cz",
     "dev": "vitepress dev docs",
     "format": "prettier --write  docs/. packages/.",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
+    "release": "standard-version",
     "serve": "vitepress serve docs"
   },
   "lint-staged": {
@@ -22,6 +24,12 @@
     "package.json": [
       "pnpm format"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "useEmoji": true
+    }
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -39,6 +47,8 @@
     "@eslint/js": "^9.2.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@vitejs/plugin-vue2": "github:vitejs/vite-plugin-vue2",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.9.1",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
@@ -54,6 +64,7 @@
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-packagejson": "^2.5.0",
     "sass": "^1.75.0",
+    "standard-version": "^9.5.0",
     "typescript": "*",
     "vite": "^5.2.10",
     "vite-plugin-externals": "^0.6.2",
