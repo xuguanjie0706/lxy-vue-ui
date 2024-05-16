@@ -249,6 +249,19 @@ importers:
         specifier: ^5.2.0
         version: 5.2.10(@types/node@20.12.11)(less@4.2.0)(sass@1.75.0)
 
+  packages/my-vue-app:
+    dependencies:
+      vue:
+        specifier: ^3.4.21
+        version: 3.4.27(typescript@5.4.5)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.0.4
+        version: 5.0.4(vite@5.2.10)(vue@3.4.27)
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.10(@types/node@20.12.11)(less@4.2.0)(sass@1.75.0)
+
   packages/test-lib:
     dependencies:
       dayjs:

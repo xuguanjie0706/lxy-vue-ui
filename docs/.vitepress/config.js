@@ -2,15 +2,54 @@ export default {
   title: 'LXY',
   description: 'Just playing around.',
   themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+            zh: {
+                translations: {
+                button: {
+                    buttonText: '搜索文档',
+                    buttonAriaLabel: '搜索文档'
+                },
+                modal: {
+                    noResultsText: '无法找到相关结果',
+                    resetButtonTitle: '清除查询条件',
+                    footer: {
+                    selectText: '选择',
+                    navigateText: '切换'
+                    }
+                }
+                }
+            }
+        }
+    }
+    },
+    locales: {
+      // root: {
+      //   label: 'English',
+      //   lang: 'en'
+      // },
+      root: {
+        label: '中文',
+        lang: 'zh'
+      },
+      // fr: {
+      //   label: 'French',
+      //   lang: 'fr', // 可选，将作为 `lang` 属性添加到 `html` 标签中
+      //   link: '/fr/guide' // 默认 /fr/ -- 显示在导航栏翻译菜单上，可以是外部的
+      // }
+    },
     // siteTitle: false,
     logo: '/logo.png',
     nav: [
       // { text: '指南', link: '/guild/installation' },
       { text: '日常', link: '/daily/' },
       { text: '组件', link: '/examples/button/' },
-      { text: '布局', link: '/css/' },
+      { text: 'JS', link: '/javascript/' },
+      { text: '样式', link: '/css/' },
       // { text: "SVG", link: "/svg/button/" },
-      { text: '动画', link: '/animate/index' },
+      { text: '动画', link: '/animate/index/' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xuguanjie0706/lxy-blog' },
@@ -78,6 +117,23 @@ export default {
       ],
       '/css/': [
         {
+          text: 'Sass',
+          items: [
+            {
+              text: '基础篇',
+              link: '/css/sass/index',
+            },
+            {
+              text: '进阶篇',
+              link: '/css/sass/advanced',
+            },
+            {
+              text: '案例篇',
+              link: '/css/sass/example',
+            },
+          ],
+        },
+        {
           text: '励志',
           items: [
             {
@@ -96,7 +152,29 @@ export default {
           ],
         },
       ],
+      '/javascript/':[
+        {
+          text:"Vue",
+          link:"/javascript/Vue3/index",
+          items:[{
+            text:'setup',
+            link:'/javascript/Vue3/setup',
+          }]
+        },
+        {
+          text:"Regexp",
+          link:"/javascript/Regexp/index",
+          // items:[{
+          //   text:'setup',
+          //   link:'/javascript/Vue3/setup',
+          // }]
+        }
+      ],
       '/daily/': [
+        {
+          text: 'vscode',
+          link: '/daily/vscode/',
+        },
         {
           text: 'vitePress',
           link: '/daily/vitepress/',
@@ -105,16 +183,7 @@ export default {
           text: 'scaffold',
           link: '/daily/scaffold/',
         },
-        {
-          text: 'Antd库',
-          link: '/daily/antd/',
-          items: [
-            {
-              text: 's2',
-              link: '/daily/antd/s2/',
-            },
-          ],
-        },
+      
         {
           text: '数据',
           link: '/daily/data/mockjs',
@@ -123,6 +192,26 @@ export default {
               text: 'mockjs',
               link: '/daily/data/mockjs/',
             },
+          ],
+        },
+        {
+          text: '工程管理',
+          // link:"/daily/pkg",
+          // activeMatch: ''
+          // collapsed: true,
+          items: [
+            {
+              text: 'pnpm',
+              link: '/daily/pkg/pnpm/index.md',
+            },
+            {
+              text: '代码规范',
+              link: '/daily/pkg/husky/index.md',
+            },
+            {
+              text:"commander",
+              link:"/daily/pkg/husky/commander/index.md"
+            }
           ],
         },
         {
@@ -139,21 +228,18 @@ export default {
             },
           ],
         },
+       
         {
           text: '运算',
           link: '/daily/operation/index.md',
         },
         {
-          text: '工程管理',
-          // link:"/daily/pkg/",
+          text: 'Antd库',
+          link: '/daily/antd/',
           items: [
             {
-              text: 'pnpm',
-              link: '/daily/pkg/pnpm/index.md',
-            },
-            {
-              text: '代码规范',
-              link: '/daily/pkg/husky/index.md',
+              text: 's2',
+              link: '/daily/antd/s2/',
             },
           ],
         },

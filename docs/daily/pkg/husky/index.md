@@ -96,7 +96,7 @@ pnpm  i  commitizen cz-git -D
 
 ::: details 展开查看 ` .commitlintrc.js`完整配置模版
 
-```
+```.commitlintrc.js
 module.exports = {
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
@@ -178,6 +178,39 @@ module.exports = {
     }
   },
 ```
+
+### 到此其实还是不够的，你没有办法强制别人都使用`pnpm commit` 来提交
+
+
+```
+pnpm i @commitlint/config-conventional  @commitlint/cli -D
+```
+
+```.commitlintrc.js
+extends: ['@commitlint/config-conventional'],
+```
+
+```.husky/commit-msg
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+
+printf "\n%s开始检测commit描述是否符合规范...%s\n" "${green}" "${reset}"
+
+if ! npx --no -- commitlint --edit $1 ; then
+    echo "《《《${red}commit描述检测到异常，请按规范填写commit描述！${reset}"
+    exit 1;
+fi
+printf "%s恭喜你，非常规范！%s\n" "${green}" "${reset}"
+exit
+
+```
+
+如果你没有权限，请执行`chmod 777 .husky/*`
+
 
 ## 发版
 
