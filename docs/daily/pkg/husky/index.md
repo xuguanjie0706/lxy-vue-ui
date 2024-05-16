@@ -9,7 +9,6 @@ pnpm i eslint@8
 pnpm eslint --init
 ```
 
-
 ## prettier
 
 ```
@@ -181,7 +180,6 @@ module.exports = {
 
 ### 到此其实还是不够的，你没有办法强制别人都使用`pnpm commit` 来提交
 
-
 ```
 pnpm i @commitlint/config-conventional  @commitlint/cli -D
 ```
@@ -210,7 +208,6 @@ exit
 ```
 
 如果你没有权限，请执行`chmod 777 .husky/*`
-
 
 ## 发版
 

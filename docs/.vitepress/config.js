@@ -6,24 +6,24 @@ export default {
       provider: 'local',
       options: {
         locales: {
-            zh: {
-                translations: {
-                button: {
-                    buttonText: '搜索文档',
-                    buttonAriaLabel: '搜索文档'
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档',
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
                 },
-                modal: {
-                    noResultsText: '无法找到相关结果',
-                    resetButtonTitle: '清除查询条件',
-                    footer: {
-                    selectText: '选择',
-                    navigateText: '切换'
-                    }
-                }
-                }
-            }
-        }
-    }
+              },
+            },
+          },
+        },
+      },
     },
     locales: {
       // root: {
@@ -32,7 +32,7 @@ export default {
       // },
       root: {
         label: '中文',
-        lang: 'zh'
+        lang: 'zh',
       },
       // fr: {
       //   label: 'French',
@@ -152,23 +152,25 @@ export default {
           ],
         },
       ],
-      '/javascript/':[
+      '/javascript/': [
         {
-          text:"Vue",
-          link:"/javascript/Vue3/index",
-          items:[{
-            text:'setup',
-            link:'/javascript/Vue3/setup',
-          }]
+          text: 'Vue',
+          link: '/javascript/Vue3/index',
+          items: [
+            {
+              text: 'setup',
+              link: '/javascript/Vue3/setup',
+            },
+          ],
         },
         {
-          text:"Regexp",
-          link:"/javascript/Regexp/index",
+          text: 'Regexp',
+          link: '/javascript/Regexp/index',
           // items:[{
           //   text:'setup',
           //   link:'/javascript/Vue3/setup',
           // }]
-        }
+        },
       ],
       '/daily/': [
         {
@@ -183,7 +185,7 @@ export default {
           text: 'scaffold',
           link: '/daily/scaffold/',
         },
-      
+
         {
           text: '数据',
           link: '/daily/data/mockjs',
@@ -209,9 +211,9 @@ export default {
               link: '/daily/pkg/husky/index.md',
             },
             {
-              text:"commander",
-              link:"/daily/pkg/husky/commander/index.md"
-            }
+              text: 'commander',
+              link: '/daily/pkg/husky/commander/index.md',
+            },
           ],
         },
         {
@@ -228,7 +230,7 @@ export default {
             },
           ],
         },
-       
+
         {
           text: '运算',
           link: '/daily/operation/index.md',

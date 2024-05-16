@@ -1,9 +1,9 @@
 # \<script setup \>
+
 `<script setup>` 是在单文件组件 (SFC) 中使用组合式 API 的编译时语法糖。当同时使用 SFC 与组合式 API 时该语法是默认推荐
 
+## 基本语法
 
-
-##  基本语法
 ```
 <script setup>
 console.log('hello script setup')
@@ -11,6 +11,7 @@ console.log('hello script setup')
 ```
 
 ## 响应式
+
 ```
 import { ref,toRefs } from 'vue'
 
@@ -18,8 +19,8 @@ const count = ref(0)
 cosnt props = toRefs(props)
 ```
 
-
 ## 使用组件
+
 ```
 <script setup>
 import MyComponent from './MyComponent.vue'
@@ -31,6 +32,7 @@ import MyComponent from './MyComponent.vue'
 ```
 
 ### 动态组件
+
 ```
 <script setup>
 import Foo from './Foo.vue'
@@ -44,9 +46,11 @@ import Bar from './Bar.vue'
 ```
 
 ### 递归组件
+
 一个单文件组件可以通过它的文件名被其自己所引用。例如：名为 FooBar.vue 的组件可以在其模板中用 <FooBar/> 引用它自己。
 
 ### 命名空间组件
+
 ```
 <script setup>
 import * as Form from './form-components'
@@ -60,6 +64,7 @@ import * as Form from './form-components'
 ```
 
 ## 使用自定义指令
+
 ```
 <script setup>
 const vMyDirective = {
@@ -74,6 +79,7 @@ const vMyDirective = {
 ```
 
 ## defineProps() 和 defineEmits()
+
 ```
 <script setup>
 const props = defineProps({
@@ -85,9 +91,8 @@ const emit = defineEmits(['change', 'delete'])
 ```
 
 ## defineModel() 3.4+
+
 fdafda
-
-
 
 ```
 const model = defineModel()
@@ -109,6 +114,7 @@ function inc() {
 ```
 
 ### 修饰符
+
 ```
 const [modelValue, modelModifiers] = defineModel({
   // get() 省略了，因为这里不需要它
@@ -146,7 +152,9 @@ defineExpose({
 ```
 
 # defineOptions()
+
 这个宏可以用来直接在 `<script setup>` 中声明组件选项，而不必使用单独的块：
+
 ```
 <script setup>
 defineOptions({

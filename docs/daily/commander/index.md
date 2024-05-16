@@ -16,7 +16,7 @@ xgjfy.description("翻译").action(async(query,type)=>{
     } catch (error) {
          throw new Error("不可用")
     }
-})  
+})
 //捕获所有指令
 program.on('command:*', ([cmd,opts]) => {
     console.log(cmd);

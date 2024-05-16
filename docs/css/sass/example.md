@@ -1,10 +1,13 @@
 # Sass案例篇
+
 为了让样式写的更好看
 
 BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。使用BEM规范来命名CSS，组织HTML中选择器的结构，利于CSS代码的维护，使得代码结构更清晰。
 
 ## b 块
+
 快速声明 `namespace+block`className
+
 ```
 @mixin b($block) {
   $B: $namespace + '-' + $block !global;
@@ -15,7 +18,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## m 元素
+
 他应该包裹在`b`里面，快速声明 `namespace+block+modifier-separator+unit` className
+
 ```
 @mixin m($modifier) {
   $selector: &;  //这行似乎没有用
@@ -36,8 +41,10 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 }
 ```
 
-## selectorToString 
+## selectorToString
+
 获取字符串第二个到倒数第二个之间，注意是从1或-1开始数，长度不够返回空
+
 ```
 @function selectorToString($selector) {
   $selector: inspect($selector); // 获取选择字符串
@@ -46,8 +53,10 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 }
 ```
 
-## containWhenFlag  
+## containWhenFlag
+
 判断标记`$state-prefix`是否存在
+
 ```
 @function containWhenFlag($selector) {
   $selector: selectorToString($selector);
@@ -61,7 +70,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## containsModifier
+
 判断标记`$modifier-separator`是否存在
+
 ```
 @function containsModifier($selector) {
   $selector: selectorToString($selector);
@@ -74,9 +85,10 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 }
 ```
 
+## containPseudoClass
 
-## containPseudoClass 
 判断是否有伪类
+
 ```
 @function containPseudoClass($selector) {
   $selector: selectorToString($selector);
@@ -90,7 +102,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## hitAllSpecialNestRule
+
 命中所有特殊嵌套规则除了`$element-separator`
+
 ```
 @function hitAllSpecialNestRule($selector) {
   @return containsModifier($selector) or containWhenFlag($selector) or
@@ -100,9 +114,11 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## e 元素
+
 学习完上面的函数，才能理解。
 
 大概意思如果命中特殊规则，在根目录下创建，没有则在父元素下创建
+
 ```
 @mixin e($element) {
   $E: $element !global;    // 注册一个全局变量
@@ -134,7 +150,8 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
   }
 }
 ```
-``` 例子
+
+```例子
 .a{
     span{
         @include b(alert){
@@ -157,7 +174,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## when
+
 快速声明`is-state`className
+
 ```
 @mixin when($state) {
   @at-root {
@@ -169,7 +188,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## share-rule
+
 还没做到
+
 ```
 @mixin share-rule($name) {
   $rule-name: '%shared-' + $name;
@@ -180,8 +201,10 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 }
 ```
 
-## meb 
+## meb
+
 还没做到
+
 ```
 @mixin meb($modifier: false, $element: $E, $block: $B) {
   $selector: &;
@@ -202,6 +225,7 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## pseudo
+
 ```
 @mixin pseudo($pseudo) {
   @at-root #{&}#{':#{$pseudo}'} {
@@ -211,7 +235,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## extend-rule
+
 还没做到
+
 ```
 @mixin extend-rule($name) {
   @extend #{'%shared-' + $name};
@@ -220,7 +246,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## configurable-m
+
 还没做到
+
 ```
 @mixin configurable-m($modifier, $E-flag: false) {
   $selector: &;
@@ -241,7 +269,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## spec-selector
+
 未使用到
+
 ```
 @mixin spec-selector(
   $specSelector: '',
@@ -267,9 +297,10 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 
 ```
 
-
 ## utils-user-select
+
 未使用
+
 ```
 @mixin utils-user-select($value) {
   -moz-user-select: $value;
@@ -277,7 +308,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
   -ms-user-select: $value;
 }
 ```
+
 ## utils-clearfix
+
 ```
 @mixin utils-clearfix {
   $selector: &;
@@ -296,6 +329,7 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
 ```
 
 ## utils-vertical-center
+
 ```
 @mixin utils-vertical-center {
   $selector: &;
@@ -309,7 +343,9 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
   }
 }
 ```
-## 
+
+##
+
 ```
 @mixin utils-ellipsis {
   overflow: hidden;
@@ -317,8 +353,3 @@ BEM 是 Block（块） Element（元素） Modifier（修饰器）的简称。�
   white-space: nowrap;
 }
 ```
-
-
-
-
-
