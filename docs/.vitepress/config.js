@@ -4,41 +4,26 @@ export default {
   themeConfig: {
     search: {
       provider: 'local',
-      options: {
-        locales: {
-          zh: {
-            translations: {
-              button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档',
-              },
-              modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    locales: {
-      // root: {
-      //   label: 'English',
-      //   lang: 'en'
-      // },
-      root: {
-        label: '中文',
-        lang: 'zh',
-      },
-      // fr: {
-      //   label: 'French',
-      //   lang: 'fr', // 可选，将作为 `lang` 属性添加到 `html` 标签中
-      //   link: '/fr/guide' // 默认 /fr/ -- 显示在导航栏翻译菜单上，可以是外部的
-      // }
+      // options: {
+        // locales: {
+        //   zh: {
+        //     translations: {
+        //       button: {
+        //         buttonText: '搜索文档',
+        //         buttonAriaLabel: '搜索文档',
+        //       },
+        //       modal: {
+        //         noResultsText: '无法找到相关结果',
+        //         resetButtonTitle: '清除查询条件',
+        //         footer: {
+        //           selectText: '选择',
+        //           navigateText: '切换',
+        //         },
+        //       },
+        //     },
+        //   },
+        // },
+        // },
     },
     // siteTitle: false,
     logo: '/logo.png',
@@ -49,7 +34,7 @@ export default {
       { text: 'JS', link: '/javascript/' },
       { text: '样式', link: '/css/' },
       // { text: "SVG", link: "/svg/button/" },
-      { text: '动画', link: '/animate/index/' },
+      { text: '动画', link: '/animate/index' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xuguanjie0706/lxy-blog' },
@@ -106,7 +91,7 @@ export default {
           ],
         },
         {
-          text: '媒体组件',
+          text: '数据组件',
           items: [
             {
               text: '大数据',
@@ -212,7 +197,7 @@ export default {
             },
             {
               text: 'commander',
-              link: '/daily/pkg/husky/commander/index.md',
+              link: '/daily/commander/index.md',
             },
           ],
         },

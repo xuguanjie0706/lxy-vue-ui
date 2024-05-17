@@ -35,9 +35,9 @@ importers:
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
-      mockjs:
-        specifier: ^1.1.0
-        version: 1.1.0
+      vue:
+        specifier: ^3.4.27
+        version: 3.4.27(typescript@5.4.5)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -90,6 +90,9 @@ importers:
       husky:
         specifier: ^8.0.0
         version: 8.0.3
+      mockjs:
+        specifier: ^1.1.0
+        version: 1.1.0
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -2410,7 +2413,7 @@ packages:
   /commander@12.0.0:
     resolution: {integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==}
     engines: {node: '>=18'}
-    dev: false
+    dev: true
 
   /commitizen@4.3.0(@types/node@20.12.11)(typescript@5.4.5):
     resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
@@ -5066,7 +5069,7 @@ packages:
     hasBin: true
     dependencies:
       commander: 12.0.0
-    dev: false
+    dev: true
 
   /modify-values@1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}

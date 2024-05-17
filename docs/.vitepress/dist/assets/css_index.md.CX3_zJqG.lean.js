@@ -1,1 +1,0 @@
-import{aw as a,p as e,q as t,aQ as r}from"./chunks/framework.0Ep84fQ5.js";const f=JSON.parse('{"title":"励志","description":"","frontmatter":{},"headers":[],"relativePath":"css/index.md","filePath":"css/index.md"}'),o={name:"css/index.md"},n=r("",5),i=[n];function s(d,c,h,l,_,m){return e(),t("div",null,i)}const p=a(o,[["render",s]]);export{f as __pageData,p as default};

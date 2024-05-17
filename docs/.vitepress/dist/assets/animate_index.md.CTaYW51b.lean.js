@@ -1,1 +1,0 @@
-import{aw as a,p as e,q as t,aQ as n}from"./chunks/framework.0Ep84fQ5.js";const f=JSON.parse('{"title":"动画","description":"","frontmatter":{},"headers":[],"relativePath":"animate/index.md","filePath":"animate/index.md"}'),r={name:"animate/index.md"},o=n("",3),i=[o];function s(d,_,c,h,l,m){return e(),t("div",null,i)}const u=a(r,[["render",s]]);export{f as __pageData,u as default};

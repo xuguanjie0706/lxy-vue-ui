@@ -40,7 +40,8 @@
     "jsdom": "^24.0.0",
     "less": "^4.2.0",
     "lint-staged": "^15.2.2",
-    "mockjs": "^1.1.0"
+    "mockjs": "^1.1.0",
+    "vue": "^3.4.27"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
