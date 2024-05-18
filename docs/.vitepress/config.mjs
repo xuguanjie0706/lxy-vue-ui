@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Lxy Blog',
   description: 'Personal blog',
-  srcDir: './docs',
   themeConfig: {
     search: {
       provider: 'local',
@@ -39,9 +38,7 @@ export default defineConfig({
       },
       {
         text: '脚手架',
-        items: [
-          { text: '翻译', link: '/Engineering/scaffold/fy' },
-        ],
+        items: [{ text: '翻译', link: '/Engineering/scaffold/fy' }],
       },
     ],
   },
