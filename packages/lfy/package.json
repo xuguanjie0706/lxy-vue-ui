@@ -1,0 +1,17 @@
+{
+  "name": "lfy",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "bin": "src/index.js",
+  "scripts": {
+    "dev": "npx zx src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "minimist": "^1.2.8"
+  }
+}

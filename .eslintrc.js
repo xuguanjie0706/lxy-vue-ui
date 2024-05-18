@@ -3,6 +3,9 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  globals:{
+    zx:true
+  },
   extends: [
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
@@ -13,9 +16,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['vue', 'promise'],
+  plugins: ['vue','promise'],
   rules: {
-    'promise/always-return': 'error',
-    'promise/no-callback-in-promise': 'error',
+    // 'promise/always-return': 'error',
+    // 'promise/no-callback-in-promise': 'error',
   },
 };

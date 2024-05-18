@@ -1,16 +1,17 @@
-import elementplus from 'element-plus';
-import 'element-plus/dist/index.css';
+// https://vitepress.dev/guide/custom-theme
 import DefaultTheme from 'vitepress/theme';
-// import TurningStepsBar from "/components/TurningStepsBar"
-// import '../public/base.css';
+import { h } from 'vue';
 import './style.css';
-console.log(DefaultTheme);
+
+/** @type {import('vitepress').Theme} */
 export default {
-  ...DefaultTheme,
-  enhanceApp: async ({ app, router, siteData }) => {
-    // app is the Vue 3 app instance from `createApp()`. router is VitePress'
-    // custom router. `siteData`` is a `ref`` of current site-level metadata.
-    app.use(elementplus);
-    // app.component("TurningStepsBar",TurningStepsBar)
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+    });
+  },
+  enhanceApp({ app, router, siteData }) {
+    // ...
   },
 };
