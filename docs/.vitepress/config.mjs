@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'Lxy Blog',
   description: 'Personal blog',
   lang: 'zh-CN',
-  base:"/",
+  base: '/lxy-blog/',
   themeConfig: {
     lastUpdated: true,
     lastUpdatedText: '最后修改时间',

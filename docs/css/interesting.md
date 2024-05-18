@@ -1,8 +1,4 @@
 <style>
-.box{
-    width:100px;
-    height:100px;
-}
 .reflect__below{
     -webkit-box-reflect: below;
 } 
