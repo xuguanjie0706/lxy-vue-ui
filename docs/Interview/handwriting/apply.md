@@ -1,22 +1,22 @@
 <script setup>
-Function.prototype.myApply = function(context){
-    if( typeof this !== "function"){
-        return console.error("type error");
-    }
-    let args = [...arguments][1]
-    context = context || window;
-    const sym = Symbol('fn');
-    context[sym]= this
-    const result = context[sym](...args)
-    delete context[sym]
-    return result
-} 
+// Function.prototype.myApply = function(context){
+//     if( typeof this !== "function"){
+//         return console.error("type error");
+//     }
+//     let args = [...arguments][1]
+//     context = context || window;
+//     const sym = Symbol('fn');
+//     context[sym]= this
+//     const result = context[sym](...args)
+//     delete context[sym]
+//     return result
+// } 
 
-function sum(a,b){
-    return a+b
-}
+// function sum(a,b){
+//     return a+b
+// }
 
-console.log(sum.myApply(null,["3","2"]))
+// console.log(sum.myApply(null,["3","2"]))
 
 // apply(null,123)
 </script>

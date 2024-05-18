@@ -1,14 +1,14 @@
 <script setup>
-Function.prototype.mybind = function(context){
-    if(typeof this !== 'function'){
-        console.log("type is not function")
-    }
-    const args = [...argument].slice(1)
-    fn = this
-    return function Fn(){
-       return fn.apply(context,args.concat(arguments))
-    }
-}
+// Function.prototype.mybind = function(context){
+//     if(typeof this !== 'function'){
+//         console.log("type is not function")
+//     }
+//     const args = [...argument].slice(1)
+//     fn = this
+//     return function Fn(){
+//        return fn.apply(context,args.concat(arguments))
+//     }
+// }
 </script>
 
 # Bind

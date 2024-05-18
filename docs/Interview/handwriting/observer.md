@@ -61,24 +61,24 @@ class Subject {
 // 使用案例
 
 // 猎人发布一个悬赏主题
-const subject = new Subject('活动:发现鹿群')
+// const subject = new Subject('活动:发现鹿群')
 
-// 松鼠
-const observer1 = new Squirrel("松鼠1")
-// 小熊
-const observer2 = new Bear("小熊1")
-// 小鸟
-const observer3 = new Bird("松鼠1")
+// // 松鼠
+// const observer1 = new Squirrel("松鼠1")
+// // 小熊
+// const observer2 = new Bear("小熊1")
+// // 小鸟
+// const observer3 = new Bird("松鼠1")
 
 
-// 狐狸 小鸟 松鼠 进入了活动中心
-subject.attach(observer1)
-subject.attach(observer2)
-subject.attach(observer3)
+// // 狐狸 小鸟 松鼠 进入了活动中心
+// subject.attach(observer1)
+// subject.attach(observer2)
+// subject.attach(observer3)
 
 // 猎人说
 
-subject.notify("活动一要开始啦")
+// subject.notify("活动一要开始啦")
 
 // 所有人收到通知都做了相应的措施
 

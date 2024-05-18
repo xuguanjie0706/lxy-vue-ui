@@ -4,7 +4,11 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Lxy Blog',
   description: 'Personal blog',
+  lang: 'zh-CN',
+  base:"/",
   themeConfig: {
+    lastUpdated: true,
+    lastUpdatedText: '最后修改时间',
     search: {
       provider: 'local',
     },
@@ -65,6 +69,7 @@ export default defineConfig({
           ],
         },
       ],
+
       '/css/': [
         {
           text: 'Sass',
@@ -101,6 +106,20 @@ export default defineConfig({
         //     },
         //   ],
         // },
+      ],
+      '/Interview/': [
+        {
+          text: '手写代码',
+          items: [
+            { text: 'call', link: '/handwriting/call' },
+            { text: 'apply', link: '/handwriting/apply' },
+            { text: 'bind', link: '/handwriting/bind' },
+            { text: 'curry', link: '/handwriting/curry' },
+            { text: '发布订阅', link: '/handwriting/eventEmitter' },
+            { text: '观察者', link: '/handwriting/observer' },
+            { text: '插入排序', link: '/handwriting/insertsort' },
+          ],
+        },
       ],
       '/Engineering/': [
         {

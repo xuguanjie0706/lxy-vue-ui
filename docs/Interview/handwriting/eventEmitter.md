@@ -1,59 +1,59 @@
 <script setup>
 
-class EventEmitter {
-    constructor (){
-        this.events={}
-    }
+// class EventEmitter {
+//     constructor (){
+//         this.events={}
+//     }
 
-    on(eventName,callback){
-        if(!this.events[eventName]){
-            this.events[eventName] = []
-        }
-        this.events[eventName].push(callback)
-    }
+//     on(eventName,callback){
+//         if(!this.events[eventName]){
+//             this.events[eventName] = []
+//         }
+//         this.events[eventName].push(callback)
+//     }
 
-    emit(eventName,...args){
-        if(this.events[eventName]){
-            this.events[eventName].forEach(callback=>{
-                callback.call(this,...args)
-            })
-        }
-    }
-    off(eventName,callback){
-        if(this.events[eventName]){
-           this.events[eventName] =  this.events[eventName].filter((cb)=>cb!==callback)
-        }
-    }
-}
+//     emit(eventName,...args){
+//         if(this.events[eventName]){
+//             this.events[eventName].forEach(callback=>{
+//                 callback.call(this,...args)
+//             })
+//         }
+//     }
+//     off(eventName,callback){
+//         if(this.events[eventName]){
+//            this.events[eventName] =  this.events[eventName].filter((cb)=>cb!==callback)
+//         }
+//     }
+// }
 
-// 创建一个消息传递系统
-const emitter = new EventEmitter()
+// // 创建一个消息传递系统
+// const emitter = new EventEmitter()
 
-// 猎人1 订阅 鹿群在哪里的任务 (不同的函数代表猎人名称)
-function hunter1(area){
-    console.log(`猎人1 鹿群在 ${area}`)
-}
-emitter.on("Deer",hunter1)
+// // 猎人1 订阅 鹿群在哪里的任务 (不同的函数代表猎人名称)
+// function hunter1(area){
+//     console.log(`猎人1 鹿群在 ${area}`)
+// }
+// emitter.on("Deer",hunter1)
 
-// 猎人2 订阅 鹿群在哪里的任务 (不同的函数代表猎人名称)
-function hunter2(area){
-    console.log(`猎人2 鹿群在 ${area}`)
-}
+// // 猎人2 订阅 鹿群在哪里的任务 (不同的函数代表猎人名称)
+// function hunter2(area){
+//     console.log(`猎人2 鹿群在 ${area}`)
+// }
 
-emitter.on("Deer",hunter2)
+// emitter.on("Deer",hunter2)
 
 
 
-// 小鸟 发现 鹿群 在消息传递系统发布消息
-emitter.emit("Deer",'东边')
-// 狐狸 发现 鹿群 在消息传递系统发布消息
-emitter.emit("Deer","西边")
+// // 小鸟 发现 鹿群 在消息传递系统发布消息
+// emitter.emit("Deer",'东边')
+// // 狐狸 发现 鹿群 在消息传递系统发布消息
+// emitter.emit("Deer","西边")
 
-// 猎人1 取消订阅 鹿群在哪里的任务 
-emitter.off('Deer', hunter1); 
+// // 猎人1 取消订阅 鹿群在哪里的任务 
+// emitter.off('Deer', hunter1); 
 
-// 松鼠 发现 鹿群 在消息传递系统发布消息
-emitter.emit("Deer","北边") //只有猎人才能收到消息
+// // 松鼠 发现 鹿群 在消息传递系统发布消息
+// emitter.emit("Deer","北边") //只有猎人才能收到消息
 
 
 </script>

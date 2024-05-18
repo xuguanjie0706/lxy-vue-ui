@@ -19,7 +19,7 @@ function insertSort(arr){
     
 }
 
-console.log(insertSort([4,5,6,1,3,2]))
+// console.log(insertSort([4,5,6,1,3,2]))
 
 </script>
 
