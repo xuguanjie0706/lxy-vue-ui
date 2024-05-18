@@ -27,7 +27,7 @@ features:
   - icon: 📦
     title: 打包工具
     details: 他是个高效的打包师，无论是vite还是webpack，都能让你的项目轻松打包，快速上线。
-    
+
   - icon: 📐
     title: 前端规范及工程化
     details: 她是位严谨的导师，引导你遵循前端规范，提升代码质量，让你的团队开发更加高效有序。
@@ -51,8 +51,6 @@ features:
   - icon: 🧩
     title: 组件库
     details: 他是个勤劳的工匠，借鉴开源框架，构建出高效、可复用的组件库，让你在开发中如鱼得水。
-
-
 
   - icon: ⚡
     title: 前端性能优化

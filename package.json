@@ -27,6 +27,9 @@
     "package.json": [
       "pnpm format"
     ],
+    "*.md": [
+      "pnpm format"
+    ],
     "packages/**/*.{ts,.tsx,js,vue,jsx,vue,mjs}": [
       "pnpm format",
       "pnpm lint"
