@@ -13,3 +13,5 @@ try {
 } catch (error) {
   console.log(chalk.blue(error));
 }
+
+console.log('加一行代码');
