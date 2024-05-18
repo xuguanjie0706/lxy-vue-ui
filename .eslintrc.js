@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: ['vue', 'promise'],
   rules: {
-    "n/no-unpublished-import": [0, {
+    "n/no-unpublished-import": ["error", {
       "allowModules": [],
       "convertPath": null
     }],
