@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+
   extends: [
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
@@ -15,7 +16,7 @@ module.exports = {
   },
   plugins: ['vue', 'promise'],
   rules: {
-    "n/no-unpublished-import": ["error", {
+    "n/no-unpublished-import": [0, {
       "allowModules": [],
       "convertPath": null
     }],

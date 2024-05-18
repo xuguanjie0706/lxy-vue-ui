@@ -1,7 +1,15 @@
 #!/usr/bin/env node
 
-// import { $ } from 'zx';
-// const args = require('minimist')(process.argv.slice(2));
+import { chalk  } from 'zx';
+import minimist from 'minimist'
+import fy from "./fy.js"
 
-let branch = await $`git branch --show-current`;
-console.log(`Current git branch is ${branch}`);
+const args =  minimist(process.argv.slice(2));
+
+const {l:type, _:query}= args
+try {
+    const data = await fy(query.join(" "),type)
+    console.log(chalk.green(data))
+} catch (error) {
+    console.log(chalk.blue(error))
+}
