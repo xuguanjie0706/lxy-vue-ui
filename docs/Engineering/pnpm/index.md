@@ -4,16 +4,6 @@ title: VitePress
 
 # PNPM
 
-<pre>{{ theme }}</pre>
-
-### Page Data
-
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-
-<pre>{{ frontmatter }}</pre>
-
 ## 概述
 
 使用 pnpm 时，依赖会被存储在内容可寻址的存储中。不用重复安装

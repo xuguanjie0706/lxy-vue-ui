@@ -16,7 +16,7 @@
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
-    "format": "prettier --write  . docs/. packages/.",
+    "format": "prettier --write  --cache .",
     "preinstall": "npx -y only-allow pnpm",
     "lint": "eslint --fix",
     "prepare": "husky install",

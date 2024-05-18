@@ -8,7 +8,7 @@ titleTemplate: 一个为小李写的博客
 hero:
   name: 想为小李而提升
   text: 一个为小李写的博客
-  tagline: 干了8年搬砖才知道，最好的学习是抄袭
+  tagline: 8年搬砖，前面7年都搬错了！真的就是啥都没有搬过来
   image:
     src: /logo.png
     alt: Lxy
@@ -27,6 +27,10 @@ features:
   - icon: 📦
     title: 打包工具
     details: 他是个高效的打包师，无论是vite还是webpack，都能让你的项目轻松打包，快速上线。
+    
+  - icon: 📐
+    title: 前端规范及工程化
+    details: 她是位严谨的导师，引导你遵循前端规范，提升代码质量，让你的团队开发更加高效有序。
 
   - icon: 🔧
     title: 脚手架
@@ -48,9 +52,7 @@ features:
     title: 组件库
     details: 他是个勤劳的工匠，借鉴开源框架，构建出高效、可复用的组件库，让你在开发中如鱼得水。
 
-  - icon: 📐
-    title: 前端规范及工程化
-    details: 她是位严谨的导师，引导你遵循前端规范，提升代码质量，让你的团队开发更加高效有序。
+
 
   - icon: ⚡
     title: 前端性能优化
