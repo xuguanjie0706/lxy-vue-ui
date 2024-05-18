@@ -21,12 +21,20 @@ export default defineConfig({
       // { text: '指南', link: '/guild/installation' },
       { text: '日常', link: '/daily/index' },
       // { text: '组件', link: '/examples/button/' },
-      // { text: 'JS', link: '/javascript/' },
-      { text: '样式', link: '/css/' },
+      { text: 'JS', link: '/Javascript/' },
+      {
+        text: 'UI',
+        link: '/css/',
+        items: [
+          {
+            text: 'Css',
+            link: '/css/',
+          },
+          { text: '动画', link: '/animate/index' },
+        ],
+      },
       { text: '工程', link: '/Engineering/' },
-      { text: '动画', link: '/animate/index' },
     ],
-
     sidebar: {
       '/daily/': [
         {
@@ -69,7 +77,59 @@ export default defineConfig({
           ],
         },
       ],
-
+      LowCode: [
+        {
+          text: '低代码',
+        },
+      ],
+      Javascript: [
+        {
+          text: 'Vue3',
+          link: '/Javascript/Vue3/index.md',
+          items: [
+            {
+              text: 'setup',
+              link: '/Javascript/Vue3/setup.md',
+            },
+          ],
+        },
+        {
+          text: 'React',
+          link: '/Javascript/React/index.md',
+          items: [
+            {
+              text: 'setup',
+              link: '/Javascript/React/setup.md',
+            },
+          ],
+        },
+        {
+          text: '正则',
+          link: '/Javascript/Regexp/index.md',
+        },
+      ],
+      PackagingTools: [
+        {
+          text: '打包工具',
+          link: '/PackagingTools/',
+          items: [
+            {
+              text: 'vite',
+              // link: '/PackagingTools/vite/index',
+              items: [
+                {
+                  text: '插件',
+                  link: '/PackagingTools/vite/plugin',
+                },
+              ],
+            },
+            {
+              text: 'vitepress',
+              link: '/PackagingTools/vitepress/index',
+            },
+          ],
+        },
+      ],
       '/css/': [
         {
           text: 'Sass',
@@ -88,24 +148,9 @@ export default defineConfig({
             },
           ],
         },
-        // {
-        //   text: '励志',
-        //   items: [
-        //     {
-        //       text: '基础篇',
-        //       link: '/css/base',
-        //     },
-        //   ],
-        // },
-        // {
-        //   text: '趣谈',
-        //   items: [
-        //     {
-        //       text: '记录奇技淫巧',
-        //       link: '/css/interesting',
-        //     },
-        //   ],
-        // },
+        {
+          text: 'WindiCss',
+        },
       ],
       '/Interview/': [
         {

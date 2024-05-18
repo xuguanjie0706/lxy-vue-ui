@@ -6,9 +6,9 @@ title: LXY
 titleTemplate: 一个为小李写的博客
 
 hero:
-  name: 想为小李而提升
-  text: 一个为小李写的博客
-  tagline: 8年搬砖，前面7年都搬错了！真的就是啥都没有搬过来
+  name: 小李的吗喽
+  text: 搬点砖彰显吗喽的价值
+  tagline: 8年搬砖，前面7年都搬错了！真的就是啥都没有搬过来,所以从今天开始
   image:
     src: /logo.png
     alt: Lxy
@@ -22,32 +22,34 @@ hero:
 features:
   - icon: 📆
     title: 每日记录
+    link: /daily/
     details: 她是一位细心的守护者，记录着你的每一步成长，让回忆有迹可循。
 
   - icon: 📦
     title: 打包工具
     details: 他是个高效的打包师，无论是vite还是webpack，都能让你的项目轻松打包，快速上线。
+    link: /PackagingTools/
 
   - icon: 📐
     title: 前端规范及工程化
     details: 她是位严谨的导师，引导你遵循前端规范，提升代码质量，让你的团队开发更加高效有序。
-
-  - icon: 🔧
-    title: 脚手架
-    details: 他是个贴心的助手，快速搭建项目脚手架，常用命令一应具备，让你的开发事半功倍。
+    link: /Engineering/
 
   - icon: 📝
     title: JS
     details: 她是一位优雅的舞者，用优雅的舞姿演绎着JavaScript的奥秘，引领你进入编程的殿堂。
-
+    link: /Javascript/
   - icon: 🏷️
     title: TS
     details: 他是个严谨的匠人，用TypeScript的严谨与强大为你打造出完美的作品，让你爱不释手。
-
+    link: /TypeScript/
   - icon: 🎨
-    title: 图形化搭建工具
+    title: 低代码
     details: 她是个创意无限的艺术家，无需代码，只需通过图形化界面，她就能帮你搭建出令人惊艳的应用。
-
+    link: /lowCode/
+  - icon: 🔧
+    title: 脚手架
+    details: 他是个贴心的助手，快速搭建项目脚手架，常用命令一应具备，让你的开发事半功倍。
   - icon: 🧩
     title: 组件库
     details: 他是个勤劳的工匠，借鉴开源框架，构建出高效、可复用的组件库，让你在开发中如鱼得水。
@@ -63,6 +65,7 @@ features:
   - icon: 📜
     title: 面试内容
     details: 他是个博学的智者，广泛涉猎前端面试知识点，为你未来的职业发展提供坚实的支持。
+    link: /Interview/
 
   - icon: 📱
     title: Flutter
