@@ -18,7 +18,6 @@ export default defineConfig({
     ],
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      // { text: '指南', link: '/guild/installation' },
       { text: '日常', link: '/daily/index' },
       // { text: '组件', link: '/examples/button/' },
       { text: 'JS', link: '/Javascript/' },
@@ -33,6 +32,7 @@ export default defineConfig({
           { text: '动画', link: '/animate/index' },
         ],
       },
+      { text: '打包工具', link: '/PackagingTools/' },
       { text: '工程', link: '/Engineering/' },
     ],
     sidebar: {
@@ -115,10 +115,14 @@ export default defineConfig({
           items: [
             {
               text: 'vite',
-              // link: '/PackagingTools/vite/index',
+              link: '/PackagingTools/vite/index',
               items: [
                 {
-                  text: '插件',
+                  text: '插件汇总',
+                  link: '/PackagingTools/vite/usePlugin',
+                },
+                {
+                  text: '开发插件',
                   link: '/PackagingTools/vite/plugin',
                 },
               ],
@@ -126,6 +130,10 @@ export default defineConfig({
             {
               text: 'vitepress',
               link: '/PackagingTools/vitepress/index',
+            },
+            {
+              text: 'gulp',
+              link: '/PackagingTools/gulp/index',
             },
           ],
         },
@@ -156,13 +164,13 @@ export default defineConfig({
         {
           text: '手写代码',
           items: [
-            { text: 'call', link: '/handwriting/call' },
-            { text: 'apply', link: '/handwriting/apply' },
-            { text: 'bind', link: '/handwriting/bind' },
-            { text: 'curry', link: '/handwriting/curry' },
-            { text: '发布订阅', link: '/handwriting/eventEmitter' },
-            { text: '观察者', link: '/handwriting/observer' },
-            { text: '插入排序', link: '/handwriting/insertsort' },
+            { text: 'call', link: '/Interview/handwriting/call' },
+            { text: 'apply', link: '/Interview/handwriting/apply' },
+            { text: 'bind', link: '/Interview/handwriting/bind' },
+            { text: 'curry', link: '/Interview/handwriting/curry' },
+            { text: '发布订阅', link: '/Interview/handwriting/eventEmitter' },
+            { text: '观察者', link: '/Interview/handwriting/observer' },
+            { text: '排序算法', link: '/Interview/handwriting/insertsort' },
           ],
         },
       ],

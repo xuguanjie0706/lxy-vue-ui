@@ -17,7 +17,8 @@ hero:
       text: 开始
       link: /daily/
     - theme: alt
-      text: 在 Gitee 上查看
+      text: 练习
+      link: /Interview/
 
 features:
   - icon: 📆

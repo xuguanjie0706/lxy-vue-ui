@@ -2,7 +2,7 @@
 
 import minimist from 'minimist';
 import { chalk } from 'zx';
-import fy from './fy.js';
+import fy from './fy.mjs';
 
 const args = minimist(process.argv.slice(2));
 
@@ -13,5 +13,3 @@ try {
 } catch (error) {
   console.log(chalk.blue(error));
 }
-
-console.log('加一行代码');
