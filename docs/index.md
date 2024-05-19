@@ -7,7 +7,7 @@ titleTemplate: 一个为小李写的博客
 
 hero:
   name: 小李的吗喽
-  text: 搬点砖来彰显提高价码
+  text: 搬点砖来提高价码
   tagline: 8年搬砖，前面7年都搬错了！真的就是啥都没有搬过来,所以从今天开始好好搬
   image:
     src: /logo.png
