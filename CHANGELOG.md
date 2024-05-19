@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/xuguanjie0706/lxy-blog/compare/v2.0.0...v1.0.2) (2024-05-19)
+
+### 💄 Styles | 风格
+
+- :lipstick: 代码格式修改 ([159730f](https://github.com/xuguanjie0706/lxy-blog/commit/159730f4374978ee5ef4155b8041a1f936fdb13b))
+
+### 📝 Documentation | 文档
+
+- :memo: 目录更新，插件汇总 ([e7a275c](https://github.com/xuguanjie0706/lxy-blog/commit/e7a275c43595c25741222fd721a8182a2b4c5b1a))
+
 ## 1.0.0 (2024-05-18)
 
 ### ⚠ BREAKING CHANGES
