@@ -2,7 +2,7 @@
 
 import minimist from 'minimist';
 import { chalk } from 'zx';
-import fy from './fy.mjs';
+import fy from './fy.js';
 
 const args = minimist(process.argv.slice(2));
 

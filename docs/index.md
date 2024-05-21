@@ -7,8 +7,8 @@ titleTemplate: 一个为小李写的博客
 
 hero:
   name: 小李的吗喽
-  text: 搬点砖来提高价码
-  tagline: 8年搬砖，前面7年都搬错了！真的就是啥都没有搬过来,所以从今天开始好好搬
+  text: 从搬砖中找寻真正的价值
+  tagline: 就这样，我度过了七年的时光，回首望去，发现自己仿佛一直在原地踏步，没有真正搬起什么有价值的“砖”
   image:
     src: /logo.png
     alt: Lxy
