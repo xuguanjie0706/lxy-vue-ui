@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Lxy Blog',
   description: 'Personal blog',
+  vite:{
+    plugins:[],
+  },
   lang: 'zh-CN',
   base: '/lxy-blog/',
   themeConfig: {
@@ -54,6 +57,10 @@ export default defineConfig({
                   text: '代码合并',
                   link: '/daily/git/rebase.md',
                 },
+                {
+                  text:'git Actions',
+                  link:"/daily/git/actions.md"
+                }
               ],
             },
             {
@@ -152,13 +159,19 @@ export default defineConfig({
             },
             {
               text: '案例篇',
-              link: '/css/sass/example',
+              link: '/css/sass/index.md',
             },
           ],
         },
         {
           text: 'WindiCss',
+          link:'/css/windicss/index.md'
         },
+        {
+          text: '案例',
+          link: '/css/case/index.md'
+        },
+        
       ],
       '/Interview/': [
         {
