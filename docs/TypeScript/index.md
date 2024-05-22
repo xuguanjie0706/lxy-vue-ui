@@ -104,7 +104,9 @@ function foo():void{
 const foo1:void = undefined
 ```
 
-- enum(枚举) 具有名字的常量集合,防止开发人员提供无效的值。枚举分数字枚举和字符串枚举实现原理:反向映射。::: code-group
+- enum(枚举) 具有名字的常量集合,防止开发人员提供无效的值。枚举分数字枚举和字符串枚举实现原理:反向映射。
+
+::: code-group
 
 ```ts [ts代码]
 enum Month {
@@ -131,7 +133,9 @@ foo = ['hello world',1] // 错误
 
 - T(泛型) 泛型支持未来的数据类型及做一些数据推断。泛型在实际应用中及其广泛。例如泛型函数，泛型类型等。你以及将它理解成类型变量
 
-泛型函数：一个返回自身的函数，如果不用泛型必须指定出参和入参，灵活性差 ::: code-group
+泛型函数：一个返回自身的函数，如果不用泛型必须指定出参和入参，灵活性差
+
+::: code-group
 
 ```一个返回自身类型的函数 [bad Case]
 function identity(arg:number):number{
@@ -145,11 +149,44 @@ function identity<T>(arg:T):T{
 }
 ```
 
-::: 泛型类型
+:::
+
+泛型类型
 
 ```
 type Person<T>={
   name:string,
   skill: T
 }
+```
+
+## 高级类型
+
+TypeScript 除了拥有基础类型，还有很多复杂的高级类型。高级类型是通过组合这些基础类型的到的，可以帮助开发人员解决工程中很多棘手的问题
+
+### Index Types (索引类型)
+
+对象类型的高级变种
+
+```
+interface Person{
+  name:string
+  age:number
+}
+const person:Person ={
+  name:"jack",
+  age:35
+}
+// keyof T,检索类型查询符，keyof T 的结果为属性名的联合
+type Keys = keyof Person // 'name' | 'age' , 结果根据Person动态生成
+// T[K] ,索引反问操作符,返回对应类型的属性名类型
+type Name = Person['name'] // string 结果根据Person的name类型动态生成
+// 综合索引类型查询符和索引访问操作符，pick函数会根据不同的入参，动态调整类型
+
+function Pick<T,K extends keyof T>(o:T,name:K):T[K]{
+  return o[name]
+}
+const name:string = pick(person,'name')  //正确
+const age:string =  pick(person,'age')   //错误  person中age类型为number
+const foo:any = pick(person,"foo")       //错误  person中没有foo
 ```
