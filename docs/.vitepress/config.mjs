@@ -4,8 +4,8 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Lxy Blog',
   description: 'Personal blog',
-  vite:{
-    plugins:[],
+  vite: {
+    plugins: [],
   },
   lang: 'zh-CN',
   base: '/lxy-blog/',
@@ -58,9 +58,9 @@ export default defineConfig({
                   link: '/daily/git/rebase.md',
                 },
                 {
-                  text:'git Actions',
-                  link:"/daily/git/actions.md"
-                }
+                  text: 'git Actions',
+                  link: '/daily/git/actions.md',
+                },
               ],
             },
             {
@@ -76,6 +76,10 @@ export default defineConfig({
                   link: '/daily/data/mockjs/',
                 },
               ],
+            },
+            {
+              text: '工具',
+              link: '/daily/tool/index.md',
             },
             {
               text: 'vscode',
@@ -165,13 +169,12 @@ export default defineConfig({
         },
         {
           text: 'WindiCss',
-          link:'/css/windicss/index.md'
+          link: '/css/windicss/index.md',
         },
         {
           text: '案例',
-          link: '/css/case/index.md'
+          link: '/css/case/index.md',
         },
-        
       ],
       '/Interview/': [
         {
@@ -183,6 +186,7 @@ export default defineConfig({
             { text: 'curry', link: '/Interview/handwriting/curry' },
             { text: '发布订阅', link: '/Interview/handwriting/eventEmitter' },
             { text: '观察者', link: '/Interview/handwriting/observer' },
+            { text: '双向绑定', link: '/Interview/handwriting/defineProperty' },
             { text: '排序算法', link: '/Interview/handwriting/insertsort' },
           ],
         },

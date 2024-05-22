@@ -10,7 +10,7 @@ function repeat(fn,num,delay){
     }
 }
 var repeatFunc=repeat(console.log,4,3000)
-repeatFunc('hellow world');
+// repeatFunc('hellow world');
 </script>
 
 # 经典案例

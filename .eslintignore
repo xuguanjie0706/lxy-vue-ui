@@ -2,3 +2,4 @@ node_modules/
 dist/
 index.html
 .eslintrc.js
+packages/lxy-s2-view/**

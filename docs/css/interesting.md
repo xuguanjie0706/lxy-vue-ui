@@ -63,16 +63,4 @@
      "It's going to start repeating."
      </a>
     </p>
-    <!-- <div class=" reflect__below">
-    123
-    </div> -->
-     <!-- <div class=" reflect__left">
-    123
-    </div> -->
-    <!-- <div class=" reflect__above">
-    123
-    </div> -->
-     <!-- <div class=" reflect__above">
-    123
-    </div> -->
 </div>
