@@ -14,7 +14,7 @@
     "change:version": "changeset version",
     "commit": "git-cz",
     "docs:build": "vitepress build docs",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --port 4000",
     "docs:preview": "vitepress preview docs",
     "docs:release": "standard-version",
     "format": "prettier --write  --cache .",
