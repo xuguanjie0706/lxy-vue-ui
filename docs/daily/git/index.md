@@ -100,3 +100,21 @@ git log --graph --pretty=oneline --abbrev-commit
 ```
 
 :::
+
+## Git Hook
+
+### pre-commit
+
+在提交commit message 之前运行。
+
+### commit-msg
+
+接受存有当前提交信息的临时文件的路径并将其作为参数
+
+### post-commit
+
+在整个提交过程完成后运行
+
+### pre-push
+
+在git push 运行时更新远程引用但尚未传送对象时被调用。

@@ -188,3 +188,28 @@ var data = Mock.mock({
     }]
 })
 ```
+
+## 支持fetch
+
+mockjs默认不支持fetch,你可以安装mock-fetch实现
+
+```
+pnpm i mock-fetch
+```
+
+```
+import Mock from "mockjs"
+import mockFetch  from "mock-fetch"
+mockFetch(Mock)
+```
+
+```
+<script setup>
+    import "../../../../apis/index.js"
+    fetch("/data/get").then(r=>{
+         return r.json()
+    }).then(r=>{
+        console.log(r)
+    })
+</script>
+```

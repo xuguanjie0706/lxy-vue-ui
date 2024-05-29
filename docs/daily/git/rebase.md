@@ -4,9 +4,13 @@
 
 是将两个分支的历史记录合并为一个新的合并提交。它会保留分支的分叉结构，并创建一个新的合并提交，将两个分支的更改整合在一起。
 
-::: code-group
+推荐使用第一种方式 --no-ff 参数可以禁用这种 fast-forward 合并方式。可以保留历史分支。::: code-group
 
 ```合并代码
+git merge <branch-name> --no-ff
+```
+
+```合并代码 fast-forward
 git merge <branch-name>
 ```
 

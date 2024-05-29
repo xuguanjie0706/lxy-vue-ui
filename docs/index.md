@@ -48,6 +48,10 @@ features:
     title: 低代码
     details: 她是个创意无限的艺术家，无需代码，只需通过图形化界面，她就能帮你搭建出令人惊艳的应用。
     link: /lowCode/
+  - icon: 🔬
+    title: 测试保障
+    details: 它是我们项目的守护者，提供全面的测试解决方案，从单元测试到集成测试，确保代码质量，让你的应用稳定可靠。
+    link: /TestGuarantee/
   - icon: 🔧
     title: 脚手架
     details: 他是个贴心的助手，快速搭建项目脚手架，常用命令一应具备，让你的开发事半功倍。

@@ -93,6 +93,29 @@ export default defineConfig({
           text: '低代码',
         },
       ],
+      TestGuarantee: [
+        // {
+        //   text: '测试保障',
+        //   link: '/TestGuarantee/index.md',
+        //   items:[
+          
+        //   ]
+        // },
+        {
+          text:"Jest",
+          link: '/TestGuarantee/Jest/index.md',
+          items:[
+            {
+              text:"Jest in React",
+              link: '/TestGuarantee/Jest/react.md',
+            }
+          ]
+        },
+        {
+          text:"vitest",
+          link: '/TestGuarantee/Vitest/index.md',
+        }
+      ],
       Javascript: [
         {
           text: 'Vue3',

@@ -1,4 +1,6 @@
 import Mock from 'mockjs';
+import {mockFetch} from 'mockjs-fetch';
+
 const provinceCityData = {
   北京: ['北京市'],
   上海: ['上海市'],
@@ -11,14 +13,14 @@ const useType = {
   家具: ['桌子', '沙发', '椅子', '床'],
   办公用品: ['笔', '纸张', '橡皮'],
 };
-export const userData = Mock.mock('/data/list', 'get', {
+export const userData = Mock.mock('/data/list', 'post', {
   describe: '标准交叉表数据。',
   fields: {
     rows: ['province', 'city'],
     // rows: ['province', 'city', 'type', 'sub_type'],
     columns: ['type', 'sub_type'],
     values: ['number'],
-    valueInCols: true,
+    // valueInCols: true,
   },
   'data|1000': [
     {
@@ -39,3 +41,8 @@ export const userData = Mock.mock('/data/list', 'get', {
     },
   ],
 });
+
+export const userData1 = Mock.mock('/data/get',{
+  name:123
+})
+mockFetch(Mock)
