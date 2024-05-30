@@ -6,6 +6,10 @@
 
 ## 每日记录
 
+### 2024年5月30日
+
+**成长体会**： 加深理解IntersectionObserver和defineProperty以及理解更过的border的使用场景
+
 ### 2024年5月24日
 
 **成长体会**： 更新了TypeScript 高级类型的文档，更新React基础文档

@@ -1,0 +1,226 @@
+.container {
+  background: #8ab4b7;
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    line-height: 130px;
+    background: #5f92b1ba;
+    border-width: 10px;
+    box-sizing: border-box;
+    counter-increment: name;
+  }
+  $styleList: [ solid dotted double groove ridge inset outset dashed]; // 无序数列
+
+  @each $style in $styleList {
+    $index: index($styleList, $style);
+    .item:nth-child(#{$index}) {
+      border-style: $style;
+    }
+  }
+
+  @mixin horn {
+    cursor: pointer;
+    border-width: 10px;
+  }
+
+  .horn {
+    position: relative;
+    @include horn;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transition: all 0.2s;
+      border: 2px solid #000;
+      top: -15px;
+      left: -15px;
+      border-right: none;
+      border-bottom: none;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transition: all 0.2s;
+      border: 2px solid #000;
+      bottom: -15px;
+      right: -15px;
+      border-left: none;
+      border-top: none;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        width: calc(100% + 15px + 13px);
+        height: calc(100% + 15px + 13px);
+      }
+    }
+  }
+
+  .gradient {
+    background: linear-gradient(0deg, #077373 50%, #93239a 50%);
+  }
+
+  .bg_norepeat {
+    background-repeat: no-repeat;
+  }
+
+  .bg {
+    background: red;
+  }
+}
+
+@keyframes linearGradientMove {
+  100% {
+    background-position:
+      10px 0,
+      -10px 100%,
+      0 -10px,
+      100% 10px;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@mixin dash-active($cellWidth, $cellHeight) {
+  background:
+    linear-gradient(90deg, #333 50%, transparent 50%) repeat-x,
+    linear-gradient(90deg, #333 50%, transparent 50%) repeat-x,
+    linear-gradient(0deg, #333 50%, transparent 50%) repeat-y,
+    linear-gradient(0deg, #333 50%, transparent 50%) repeat-y;
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0;
+  animation: linearGradientMove 0.5s linear infinite;
+  background-size:
+    $cellWidth $cellHeight,
+    $cellWidth $cellHeight,
+    $cellHeight $cellWidth,
+    $cellHeight $cellWidth;
+}
+
+@function double-string($str) {
+  @if length($str) == 1 {
+    @return append(($str), $str, comma); // 直接返回由两个相同字符串组成的列表
+  } @else {
+    @return join(($str), $str, comma);
+  }
+}
+
+@mixin active-color($color1, $color2, $color3, $color4) {
+  $color1: double-string($color1);
+  $color2: double-string($color2);
+  $color3: double-string($color3);
+  $color4: double-string($color4);
+
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  background: #fff;
+  &::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+      linear-gradient($color1) no-repeat,
+      linear-gradient($color2) no-repeat,
+      linear-gradient($color3) no-repeat,
+      linear-gradient($color4) no-repeat;
+    background-size:
+      50% 50%,
+      50% 50%,
+      50% 50%,
+      50% 50%;
+    background-position:
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%;
+    animation: rotate 4s linear infinite;
+  }
+  &::before {
+    content: '';
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: #fff;
+    z-index: 2;
+  }
+}
+
+@mixin chase-color() {
+}
+
+.container-style {
+  .item {
+    border-style: dotted !important;
+  }
+  .active-dash {
+    border-style: none !important;
+    line-height: 150px;
+    @include dash-active(10px, 4px);
+  }
+  .active-color {
+    border-style: none !important;
+    @include active-color(#399953 #00ff00, #fbb300, #d53e33, #377af5)
+      //   @include active-color(#399953,#fbb300,#d53e33,#377af5)
+      //   @include active-color(transparent,#fbb300,transparent,#377af5)
+;
+  }
+  .chase-color {
+    border-style: none !important;
+    @include active-color(
+      #399953 #00ff00,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+}
+
+.box-shadow-border {
+  background: yellow !important;
+  box-shadow:
+    0px 0px 0 10px red inset,
+    0px 0px 0 10px blue;
+  padding: 10px;
+}
+.box-cell {
+  background-color: #077373;
+  width: 100%;
+  height: 100%;
+  word-break: break-all;
+  line-height: 1.4;
+  // text-wrap: wrap;
+  // white-space: pre;
+}
+
+.box-shadow-border2 {
+  box-shadow:
+    5px 0px 0px red inset,
+    -5px 0px 0px yellowgreen inset,
+    0px 5px 0px blue inset,
+    0px -5px 0px yellow inset;
+}
+
+.box-shadow-border1 {
+  box-shadow: 0px 0px 0 10px red inset;
+}

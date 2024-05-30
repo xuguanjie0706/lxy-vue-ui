@@ -98,25 +98,34 @@ export default defineConfig({
         //   text: '测试保障',
         //   link: '/TestGuarantee/index.md',
         //   items:[
-          
+
         //   ]
         // },
         {
-          text:"Jest",
+          text: 'Jest',
           link: '/TestGuarantee/Jest/index.md',
+          items: [
+            {
+              text: 'Jest in React',
+              link: '/TestGuarantee/Jest/react.md',
+            },
+          ],
+        },
+        {
+          text: 'vitest',
+          link: '/TestGuarantee/Vitest/index.md',
+        },
+      ],
+      Javascript: [
+        {
+          text:"特殊apis",
           items:[
             {
-              text:"Jest in React",
-              link: '/TestGuarantee/Jest/react.md',
+              text:"IntersectionObserver",
+              link: '/Javascript/CommonAPIs/IntersectionObserver'
             }
           ]
         },
-        {
-          text:"vitest",
-          link: '/TestGuarantee/Vitest/index.md',
-        }
-      ],
-      Javascript: [
         {
           text: 'Vue3',
           link: '/Javascript/Vue3/index.md',
@@ -132,8 +141,8 @@ export default defineConfig({
           link: '/Javascript/React/index.md',
           items: [
             {
-              text: 'setup',
-              link: '/Javascript/React/setup.md',
+              text: '基础',
+              link: '/Javascript/React/base.md',
             },
           ],
         },

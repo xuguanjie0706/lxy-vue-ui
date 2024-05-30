@@ -13,7 +13,7 @@ a{
     $color:#444; //局部变量，优先级最高
     color:$color
 }
-$px:10px 20px; //数组变量
+$px:10px 20px; // 数组变量类似于set
 $px1: 5px 10px, 20px 30px;
 div {
     margin:nth($px, 1) 0 0  nth($px, 2);    /* margin:10px 0 0 20px; */
@@ -67,7 +67,7 @@ div {
 
 ## 混合
 
-mixin相当于已经定义好了一类样式，可以在任何地方重复的使用它，就跟js中的函数一样。 @content向混合样式中导入内容。
+mixin相当于已经定义好了一类样式，可以在任何地方重复的使用它，就跟js中的函数一样。 @content向混合样式中导入内容。一定要先声明,后混合
 
 ::: code-group
 

@@ -1,5 +1,5 @@
 import Mock from 'mockjs';
-import {mockFetch} from 'mockjs-fetch';
+import { mockFetch } from 'mockjs-fetch';
 
 const provinceCityData = {
   北京: ['北京市'],
@@ -42,7 +42,7 @@ export const userData = Mock.mock('/data/list', 'post', {
   ],
 });
 
-export const userData1 = Mock.mock('/data/get',{
-  name:123
-})
-mockFetch(Mock)
+export const userData1 = Mock.mock('/data/get', {
+  name: 123,
+});
+mockFetch(Mock);
