@@ -118,13 +118,13 @@ export default defineConfig({
       ],
       Javascript: [
         {
-          text:"特殊apis",
-          items:[
+          text: '特殊apis',
+          items: [
             {
-              text:"IntersectionObserver",
-              link: '/Javascript/CommonAPIs/IntersectionObserver'
-            }
-          ]
+              text: 'IntersectionObserver',
+              link: '/Javascript/CommonAPIs/IntersectionObserver',
+            },
+          ],
         },
         {
           text: 'Vue3',
@@ -182,6 +182,14 @@ export default defineConfig({
         },
       ],
       '/css/': [
+        {
+          text:"奇技淫巧",
+          link: '/css/skills/index',
+        },
+        {
+          text:"墨守成规",
+          link: '/css/base',
+        },
         {
           text: 'Sass',
           items: [

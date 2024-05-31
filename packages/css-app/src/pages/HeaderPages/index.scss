@@ -1,0 +1,27 @@
+@import url("../../styles/base.scss");
+
+
+
+.lxy-navbar {
+    position: sticky;
+    width: 100%;
+    z-index: 12;
+    top: 0;
+    &-wrapper{
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        height: 55px;
+        background: radial-gradient(transparent 1px,#fff 1px);
+        background-size: 4px 4px;
+        backdrop-filter: saturate(50%) blur(4px);
+    }
+}
+
+
+.lxy-header-pages{
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+}
+
+

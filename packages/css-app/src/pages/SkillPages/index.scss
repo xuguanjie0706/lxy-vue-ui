@@ -1,0 +1,44 @@
+.lxy-skill-page{
+    @mixin empty($sign){
+        position: relative;
+        &::before{
+            position: absolute;
+            content: $sign;
+            text-align: center;
+        }
+    }
+    .box{
+        width: 200px;
+        height: 20px;
+    }
+    .box:empty {
+        @include empty("-")
+    }
+    .bgcolor-red{
+        background-color: red;
+    }
+    .unset{
+        background-color: unset;
+    }
+
+    .capitalize{
+        text-transform: capitalize;
+    }
+    .uppercase{
+        text-transform: uppercase;
+    }
+    .lowercase{
+        text-transform: lowercase;
+    }
+
+    .box.diagonal-line-1{
+      
+       
+    }
+
+    @mixin diagonal-line ($width,$height){
+        
+        background:  linear-gradient(20deg, transparent 49.5%, deeppink 49.5%, deeppink 50.5%, transparent 50.5%);
+    }
+
+}

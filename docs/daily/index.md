@@ -6,6 +6,10 @@
 
 ## 每日记录
 
+### 2024年5月31日
+
+**成长体会**：掌握好几个css技巧
+
 ### 2024年5月30日
 
 **成长体会**： 加深理解IntersectionObserver和defineProperty以及理解更过的border的使用场景
