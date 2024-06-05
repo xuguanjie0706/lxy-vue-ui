@@ -1,0 +1,41 @@
+import{_ as s,c as a,o as n,a4 as p}from"./chunks/framework.B3h3aO-h.js";const v=JSON.parse('{"title":"vitePress","description":"","frontmatter":{},"headers":[],"relativePath":"PackagingTools/vitepress/index.md","filePath":"PackagingTools/vitepress/index.md","lastUpdated":1716060891000}'),e={name:"PackagingTools/vitepress/index.md"},l=p(`<h1 id="vitepress" tabindex="-1">vitePress <a class="header-anchor" href="#vitepress" aria-label="Permalink to &quot;vitePress&quot;">​</a></h1><p>为了加深一遍，vitepress 1.1.4界面真的好看了很多</p><h2 id="创建工程" tabindex="-1">创建工程 <a class="header-anchor" href="#创建工程" aria-label="Permalink to &quot;创建工程&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>pnpm vitepress init</span></span></code></pre></div><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>┌  Welcome to VitePress!</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>◇  Where should VitePress initialize the config?</span></span>
+<span class="line"><span>│  ./docs</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>◇  Site title:</span></span>
+<span class="line"><span>│  My Awesome Project</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>◇  Site description:</span></span>
+<span class="line"><span>│  A VitePress Site</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>◆  Theme:</span></span>
+<span class="line"><span>│  ● Default Theme (Out of the box, good-looking docs)</span></span>
+<span class="line"><span>│  ○ Default Theme + Customization</span></span>
+<span class="line"><span>│  ○ Custom Theme</span></span>
+<span class="line"><span>└</span></span></code></pre></div><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>pnpm run docs:dev</span></span></code></pre></div><h2 id="开启搜索" tabindex="-1">开启搜索 <a class="header-anchor" href="#开启搜索" aria-label="Permalink to &quot;开启搜索&quot;">​</a></h2><div class="language-config.js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">config.js</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>themeConfig{</span></span>
+<span class="line"><span>    ...</span></span>
+<span class="line"><span>    search: {</span></span>
+<span class="line"><span>        provider: &#39;local&#39;,</span></span>
+<span class="line"><span>        options: {</span></span>
+<span class="line"><span>            locales: {</span></span>
+<span class="line"><span>                zh: {</span></span>
+<span class="line"><span>                    translations: {</span></span>
+<span class="line"><span>                    button: {</span></span>
+<span class="line"><span>                        buttonText: &#39;搜索文档&#39;,</span></span>
+<span class="line"><span>                        buttonAriaLabel: &#39;搜索文档&#39;</span></span>
+<span class="line"><span>                    },</span></span>
+<span class="line"><span>                    modal: {</span></span>
+<span class="line"><span>                        noResultsText: &#39;无法找到相关结果&#39;,</span></span>
+<span class="line"><span>                        resetButtonTitle: &#39;清除查询条件&#39;,</span></span>
+<span class="line"><span>                        footer: {</span></span>
+<span class="line"><span>                        selectText: &#39;选择&#39;,</span></span>
+<span class="line"><span>                        navigateText: &#39;切换&#39;</span></span>
+<span class="line"><span>                        }</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre></div>`,8),i=[l];function t(c,o,r,d,h,u){return n(),a("div",null,i)}const m=s(e,[["render",t]]);export{v as __pageData,m as default};
