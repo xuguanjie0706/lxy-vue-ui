@@ -1,0 +1,166 @@
+@function random-color() {
+  $random-red: random(255);
+  $random-green: random(255);
+  $random-blue: random(255);
+  @return rgb($random-red, $random-green, $random-blue);
+}
+
+%flexBlockCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexDirectionByName($name) {
+  &.#{$name} {
+    flex-direction: $name;
+    position: relative;
+    background-color: rgba($color: random-color(), $alpha: random());
+    &::before {
+      content: '#{$name}';
+      @extend %flexBlockCenter;
+    }
+  }
+}
+
+@mixin flexFlexWarpByName($name) {
+  &.#{$name} {
+    flex-wrap: $name;
+    position: relative;
+    background-color: rgba($color: random-color(), $alpha: random());
+    &::before {
+      content: '#{$name}';
+      @extend %flexBlockCenter;
+    }
+  }
+}
+
+@mixin flexJustifyContentByName($name) {
+  &.#{$name} {
+    flex-direction: row;
+    justify-content: $name;
+    position: relative;
+    background-color: rgba($color: random-color(), $alpha: random());
+    &::before {
+      content: '#{$name}';
+      @extend %flexBlockCenter;
+    }
+  }
+}
+
+@mixin flexAlignItemsByName($name) {
+  &.a-#{$name} {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: $name;
+    position: relative;
+    background-color: rgba($color: random-color(), $alpha: random());
+    &::before {
+      content: '#{$name}';
+      @extend %flexBlockCenter;
+    }
+  }
+}
+@mixin flexAlignContentByName($name) {
+  &.c-#{$name} {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: $name;
+    position: relative;
+    flex-wrap: wrap;
+    background-color: rgba($color: random-color(), $alpha: random());
+    &::before {
+      content: '#{$name}';
+      @extend %flexBlockCenter;
+    }
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-pages {
+  padding: 10px;
+  h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  section {
+    background: transparent;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .flex-box {
+    &.flex-shrink-1 {
+      .flex-item {
+        flex-shrink: 1;
+      }
+    }
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    @include flexDirectionByName(row);
+    @include flexDirectionByName(row-reverse);
+    @include flexDirectionByName(column);
+    @include flexDirectionByName(column-reverse);
+    @include flexJustifyContentByName(flex-start);
+    @include flexJustifyContentByName(flex-end);
+    @include flexJustifyContentByName(center);
+    @include flexJustifyContentByName(space-between);
+    @include flexJustifyContentByName(space-around);
+    @include flexAlignItemsByName(flex-start);
+    @include flexAlignItemsByName(flex-end);
+    @include flexAlignItemsByName(center);
+    @include flexAlignItemsByName(baseline);
+    @include flexAlignItemsByName(stretch);
+    @include flexAlignContentByName(flex-start);
+    @include flexAlignContentByName(flex-end);
+    @include flexAlignContentByName(center);
+    @include flexAlignContentByName(space-between);
+    @include flexAlignContentByName(space-around);
+    @include flexAlignContentByName(stretch);
+    @include flexFlexWarpByName(nowrap);
+    @include flexFlexWarpByName(wrap);
+    @include flexFlexWarpByName(wrap-reverse);
+
+    // &::after{
+    //     position: absolute;
+    //     content: 'row';
+    // }
+  }
+  .flex-item {
+    &.large {
+      width: 100px;
+    }
+    counter-increment: itemCounter;
+    background: orange;
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    &::before {
+      content: counter(itemCounter); /* 使用计数器作为内容 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #222222da;
+    }
+  }
+
+  .flex-item-basis {
+    flex-basis: 55px;
+    width: 30px;
+  }
+}

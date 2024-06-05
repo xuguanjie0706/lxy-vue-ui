@@ -124,6 +124,10 @@ export default defineConfig({
               text: 'IntersectionObserver',
               link: '/Javascript/CommonAPIs/IntersectionObserver',
             },
+            {
+              text: 'getComputedStyle',
+              link: '/Javascript/CommonAPIs/getComputedStyle',
+            },
           ],
         },
         {
@@ -183,12 +187,21 @@ export default defineConfig({
       ],
       '/css/': [
         {
-          text:"奇技淫巧",
+          text: '奇技淫巧',
           link: '/css/skills/index',
         },
         {
-          text:"墨守成规",
+          text: '墨守成规',
           link: '/css/base',
+        },
+        {
+          text: '布局',
+          items: [
+            {
+              text: 'flex',
+              link: '/css/flex/index',
+            },
+          ],
         },
         {
           text: 'Sass',

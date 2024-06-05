@@ -129,7 +129,7 @@ const [modelValue, modelModifiers] = defineModel({
 })
 ```
 
-# defineExpose()
+## defineExpose()
 
 使用 `<script setup>` 的组件是默认关闭的——即通过模板引用或者 $parent 链获取到的组件的公开实例，不会暴露任何在 `<script setup>` 中声明的绑定。
 
@@ -151,7 +151,7 @@ defineExpose({
 </script>
 ```
 
-# defineOptions()
+## defineOptions()
 
 这个宏可以用来直接在 `<script setup>` 中声明组件选项，而不必使用单独的块：
 
@@ -165,3 +165,31 @@ defineOptions({
 })
 </script>
 ```
+
+## shallowRef
+
+优势
+
+- 使用 shallowRef 可以避免不必要的响应式更新，从而提高性能。
+- 当处理大型对象或深层嵌套的对象时，使用 shallowRef 可以减少不必要的重新渲染和计算。::: details 具体用法
+
+```
+import { shallowRef } from 'vue';
+
+const person = { name: 'John', age: 30 };
+const shallowPerson = shallowRef(person);
+
+console.log(shallowPerson.value); // 输出: { name: 'John', age: 30 }
+
+// 修改对象内部的属性，不会触发 shallowRef 的更新
+shallowPerson.value.name = 'Alice';
+console.log(shallowPerson.value); // 输出: { name: 'Alice', age: 30 }，但组件不会重新渲染
+
+// 替换整个对象，会触发 shallowRef 的更新
+shallowPerson.value = { name: 'Bob', age: 25 };
+console.log(shallowPerson.value); // 输出: { name: 'Bob', age: 25 }，此时组件会重新渲染
+```
+
+:::
+
+shallowRef 是 Vue 3 提供的一个性能优化工具，适用于只需要监听对象引用变化而不需要监听对象内部属性变化的场景。通过合理地使用 shallowRef，可以提高 Vue 应用的性能。

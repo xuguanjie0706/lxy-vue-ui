@@ -4,6 +4,7 @@ import BorderPages from './pages/BorderPages';
 // import UnitPages from './pages/UnitPages';
 import { useEffect } from 'react';
 import 'virtual:windi.css';
+import FlexPages from './pages/FlexPages';
 import HeaderPages from './pages/HeaderPages';
 import IntersectionObservePages from './pages/IntersectionObservePages';
 import SkillPages from './pages/SkillPages';
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/UnitPages',
     element: await import('./pages/UnitPages'),
+  },
+  {
+    path: '/FlexPages',
+    element: <FlexPages></FlexPages>,
   },
   {
     path: '/HeaderPages',

@@ -16,12 +16,12 @@ module.exports = {
   },
   plugins: ['vue', 'promise'],
   rules: {
-    'n/no-unpublished-import': [
-      'error',
-      {
-        allowModules: [],
-        convertPath: null,
-      },
-    ],
+    // 'n/no-unpublished-import': [
+    //   'error',
+    //   {
+    //     allowModules: [],
+    //     convertPath: null,
+    //   },
+    // ],
   },
 };

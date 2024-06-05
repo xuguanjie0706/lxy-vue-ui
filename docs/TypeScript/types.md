@@ -251,3 +251,33 @@ type PartialPerson = Partial<Person>
 ```
 
 除了以上这些高级类型，开源社区还有一个名为utility-types的TypeScript类型操作工作集
+
+## 常用类型
+
+### Record
+
+`构造一个具有类型T的一组属性K的类型` Construct a type with a set of properties K of type T
+
+```
+type Pick<T, K extends keyof T> = {
+    [P in K]: T[P];
+};
+```
+
+### Pick
+
+`从T中，选择一组键在并集K中的属性` From T, pick a set of properties whose keys are in the union K
+
+```
+type Record<K extends keyof any, T> = {
+    [P in K]: T;
+};
+```
+
+### Omit
+
+`构造一个性质为T的类型，但类型K中的性质除外。` Construct a type with the properties of T except for those in type K.
+
+```
+type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+```

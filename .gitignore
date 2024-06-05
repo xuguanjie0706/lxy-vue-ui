@@ -25,3 +25,4 @@ cache
 *.sw?
 
 packages/lxy-s2-view
+packages/xl-element
